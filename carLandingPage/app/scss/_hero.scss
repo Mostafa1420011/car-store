@@ -1,0 +1,88 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0px;
+  &__hero {
+    background-image: linear-gradient(transparent, #c0eba6);
+    overflow: hidden;
+    margin: 0 auto;
+    transform: translateY(60px);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 20px 0px;
+    &__title {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px 0px;
+      padding: 20px 0px;
+      p {
+        @include small-screen {
+          font-size: 25px;
+        }
+        font-size: 35px;
+        font-family: 'Playwrite DE Grund', cursive;
+        color: #347928;
+      }
+
+      a {
+        @include small-screen {
+          font-size: 16px;
+          padding: 15px 30px;
+        }
+        position: absolute;
+        top: 120px;
+        border-radius: 40px;
+        padding: 15px 50px;
+        font-weight: 400;
+        font-size: 20px;
+        color: #347928;
+        font-family: 'Playwrite DE Grund', cursive;
+        border: 1px solid #347928;
+        z-index: 20;
+        &:hover {
+          box-shadow: 0 0 10px inset #347928;
+          transition: all 0.5s;
+        }
+      }
+    }
+
+    &__containt {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+        }
+        .centerCar {
+          transform: scale(3);
+          @include small-screen {
+            transform: scale(7);
+          }
+        }
+
+        .rilf1 {
+          @include small-screen {
+            display: none;
+          }
+          transform: scale(1.75);
+        }
+
+        .rilf2 {
+          @include small-screen {
+            display: none;
+          }
+          transform: scale(1.6);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  list-style: none;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  min-height: 600px;
+}
+
+main header {
+  background-color: #f5f5f7;
+  box-shadow: 0 0 5px black;
+  border-radius: 5px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+main header nav {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+main header nav .nav__icon p {
+  font-size: 20px;
+}
+main header nav .nav__links {
+  position: relative;
+}
+main header nav .nav__links--hamburger {
+  display: none;
+  z-index: 40;
+}
+@media (max-width: 600px) {
+  main header nav .nav__links--hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  main header nav .nav__links--hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+  }
+}
+main header nav .nav__links ul {
+  display: flex;
+  gap: 0px 30px;
+}
+@media (max-width: 600px) {
+  main header nav .nav__links ul {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 45px;
+    right: 0px;
+    background-color: #347928;
+    gap: 10px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 7px;
+    z-index: 100;
+  }
+}
+@media (max-width: 600px) {
+  main header nav .nav__links ul li:hover {
+    background-color: r;
+    margin-left: 7px;
+  }
+}
+main header nav .nav__links ul li a {
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+@media (max-width: 600px) {
+  main header nav .nav__links ul li a {
+    font-size: 15px;
+    color: #fffbe6;
+  }
+}
+main header nav .nav__links ul li a:hover {
+  color: black;
+  transition: all 0.5s;
+}
+main header nav .nav__links ul li:hover {
+  transform: translateY(-2px);
+  transition: all 0.5s;
+}
+main header nav .nav__links ul .offer {
+  animation: lol alternate 3 0.3s;
+}
+
+@keyframes lol {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0px;
+}
+.main__hero {
+  background-image: linear-gradient(transparent, #c0eba6);
+  overflow: hidden;
+  margin: 0 auto;
+  transform: translateY(60px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 20px 0px;
+}
+.main__hero__title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px 0px;
+  padding: 20px 0px;
+}
+.main__hero__title p {
+  font-size: 35px;
+  font-family: "Playwrite DE Grund", cursive;
+  color: #347928;
+}
+@media (max-width: 600px) {
+  .main__hero__title p {
+    font-size: 25px;
+  }
+}
+.main__hero__title a {
+  position: absolute;
+  top: 120px;
+  border-radius: 40px;
+  padding: 15px 50px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #347928;
+  font-family: "Playwrite DE Grund", cursive;
+  border: 1px solid #347928;
+  z-index: 20;
+}
+@media (max-width: 600px) {
+  .main__hero__title a {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+}
+.main__hero__title a:hover {
+  box-shadow: 0 0 10px inset #347928;
+  transition: all 0.5s;
+}
+.main__hero__containt {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.main__hero__containt div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__hero__containt div img {
+  width: 100%;
+}
+.main__hero__containt div .centerCar {
+  transform: scale(3);
+}
+@media (max-width: 600px) {
+  .main__hero__containt div .centerCar {
+    transform: scale(7);
+  }
+}
+.main__hero__containt div .rilf1 {
+  transform: scale(1.75);
+}
+@media (max-width: 600px) {
+  .main__hero__containt div .rilf1 {
+    display: none;
+  }
+}
+.main__hero__containt div .rilf2 {
+  transform: scale(1.6);
+}
+@media (max-width: 600px) {
+  .main__hero__containt div .rilf2 {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
