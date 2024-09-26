@@ -51,3 +51,9 @@ const createSrc = () => {
   }, 3000);
 };
 createSrc();
+
+// const abc = () => {
+//   setInterval(() => {
+//     carCenter;
+//   });
+// };
