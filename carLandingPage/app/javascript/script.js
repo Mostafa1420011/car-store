@@ -32,7 +32,7 @@ const createSrc = () => {
     if (x === 3) {
       x = 0;
     }
-  }, 1000);
+  }, 3000);
 
   setInterval(() => {
     carCenter.setAttribute('src', switchCar[y]);
@@ -40,7 +40,7 @@ const createSrc = () => {
     if (y === 3) {
       y = 0;
     }
-  }, 1000);
+  }, 3000);
 
   setInterval(() => {
     carRight.setAttribute('src', switchCar[z]);
@@ -48,6 +48,6 @@ const createSrc = () => {
     if (z === 3) {
       z = 0;
     }
-  }, 1000);
+  }, 3000);
 };
 createSrc();
