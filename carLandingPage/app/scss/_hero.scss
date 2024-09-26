@@ -17,6 +17,12 @@
 
     // height: 100vh;
     &__title {
+      @include large-screen {
+        transform: translateY(90px);
+      }
+      @include medium-screen {
+        transform: translateY(90px);
+      }
       display: flex;
       flex-direction: column;
       align-items: center;

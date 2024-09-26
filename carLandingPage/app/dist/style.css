@@ -139,6 +139,16 @@ main header nav .nav__links ul .offer {
   gap: 60px 0px;
   padding: 20px 0px;
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main__hero__title {
+    transform: translateY(90px);
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__hero__title {
+    transform: translateY(90px);
+  }
+}
 .main__hero__title p {
   font-size: 35px;
   font-family: "Playwrite DE Grund", cursive;
