@@ -1,19 +1,14 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  gap: 20px 0px;
   &__hero {
-    background-image: linear-gradient(transparent, #c0eba6);
-    overflow: hidden;
+    background-image: linear-gradient(gray, white);
     margin: 0 auto;
-    transform: translateY(60px);
-    display: grid;
-    grid-template-rows: auto 1fr;
+    transform: translateY(50px);
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px 0px;
     &__title {
-      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -26,61 +21,56 @@
         }
         font-size: 35px;
         font-family: 'Playwrite DE Grund', cursive;
-        color: #347928;
+        color: black;
       }
-
       a {
         @include small-screen {
           font-size: 16px;
-          padding: 15px 30px;
+          padding: 5px 40px;
         }
-        position: absolute;
-        top: 120px;
         border-radius: 40px;
         padding: 15px 50px;
         font-weight: 400;
         font-size: 20px;
-        color: #347928;
+        color: black;
         font-family: 'Playwrite DE Grund', cursive;
-        border: 1px solid #347928;
+        border: 1px solid black;
         z-index: 20;
         &:hover {
-          box-shadow: 0 0 10px inset #347928;
+          box-shadow: 0 0 10px inset black;
           transition: all 0.5s;
         }
       }
     }
 
-    &__containt {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      div {
+    &__content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      &--Car {
+        overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
-
+        margin-bottom: 500px;
+        width: calc(100% / 3);
         img {
           width: 100%;
-        }
-        .centerCar {
-          transform: scale(3);
           @include small-screen {
-            transform: scale(7);
+            width: 90%;
           }
         }
-
-        .rilf1 {
-          @include small-screen {
-            display: none;
-          }
-          transform: scale(1.75);
+      }
+      .rightLeft {
+        width: 20%;
+        @include small-screen {
+          display: none;
         }
-
-        .rilf2 {
-          @include small-screen {
-            display: none;
-          }
-          transform: scale(1.6);
+      }
+      .carCenter {
+        transform: scale(1) translateY(0px);
+        @include small-screen {
+          width: 100%;
         }
       }
     }
