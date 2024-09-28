@@ -3,7 +3,8 @@
   max-width: 2000px;
   &__hero {
     padding: 20px;
-    background-color: #8ec3b0;
+    // background-color: #8ec3b0;
+    background-color: tomato;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,8 +99,12 @@
       }
       width: 55%;
       height: 400px;
-      border-radius: 68% 32% 75% 25% / 33% 65% 35% 67%;
-      background-color: #def5e595;
+      // border-radius: 68% 32% 75% 25% / 33% 65% 35% 67%;
+      // border-radius: 3% 97% 10% 90% / 75% 28% 72% 25%;
+      // border-radius: 48% 52% 49% 51% / 31% 28% 72% 69%;
+      border-radius: 74% 26% 63% 37% / 34% 56% 44% 66%;
+      // background-color: #def5e595;
+      background-color: white;
       display: flex;
       align-items: center;
       position: relative;

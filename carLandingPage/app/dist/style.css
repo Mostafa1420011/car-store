@@ -19,7 +19,7 @@ main {
   margin: 0 auto;
 }
 main header {
-  background-color: #8ec3b0;
+  background-color: tomato;
 }
 main header nav {
   box-shadow: 0 0 10px black;
@@ -103,7 +103,7 @@ main header nav .nav__links--themes {
 }
 main header nav .nav__links--themes span {
   position: absolute;
-  background-color: black;
+  background-color: tomato;
   width: 15px;
   height: 15px;
   left: 2px;
@@ -125,7 +125,7 @@ main header nav .nav__links--themes span {
 }
 .main__hero {
   padding: 20px;
-  background-color: #8ec3b0;
+  background-color: tomato;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -236,8 +236,8 @@ main header nav .nav__links--themes span {
   perspective: 400px;
   width: 55%;
   height: 400px;
-  border-radius: 68% 32% 75% 25%/33% 65% 35% 67%;
-  background-color: rgba(222, 245, 229, 0.5843137255);
+  border-radius: 74% 26% 63% 37%/34% 56% 44% 66%;
+  background-color: white;
   display: flex;
   align-items: center;
   position: relative;

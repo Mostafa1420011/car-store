@@ -17,7 +17,8 @@ section {
 main {
   margin: 0 auto;
   header {
-    background-color: #8ec3b0;
+    // background-color: #8ec3b0;
+    background-color: tomato;
     nav {
       box-shadow: 0 0 10px black;
       width: 100%;
@@ -98,7 +99,7 @@ main {
           position: relative;
           span {
             position: absolute;
-            background-color: black;
+            background-color: tomato;
             width: 15px;
             height: 15px;
             left: 2px;
