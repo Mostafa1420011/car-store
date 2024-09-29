@@ -9,8 +9,34 @@ const func = () => {
     if (count === 3) {
       count = 0;
     }
-    console.log(count);
   }, 2000);
 };
 
 func();
+const span = document.querySelectorAll('[data-name]');
+const hamburger = document.querySelector('.hamburger');
+const ul = document.querySelector('.ul');
+
+const changeHamburger = () => {
+  ul.style.display === 'flex'
+    ? (ul.style.display = 'none')
+    : (ul.style.display = 'flex');
+};
+
+const changeArrow = (ele) => {
+  if (ele.dataset.name === 'top') {
+    ele.classList.toggle('span-top');
+  }
+  if (ele.dataset.name === 'center') {
+    ele.classList.toggle('span-center');
+  }
+  if (ele.dataset.name === 'end') {
+    ele.classList.toggle('span-end');
+  }
+};
+
+span.forEach((ele) => {
+  hamburger.addEventListener('click', () => changeArrow(ele));
+});
+
+hamburger.addEventListener('click', changeHamburger);

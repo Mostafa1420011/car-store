@@ -10,7 +10,7 @@
     gap: 0px 5%;
     @include large-screen {
       flex-direction: column-reverse;
-      gap: 210px 0px;
+      gap: 100px 0px;
     }
     @include medium-screen-down {
       flex-direction: column-reverse;
@@ -35,7 +35,7 @@
         gap: 20px 0px;
         h3 {
           color: white;
-          font-size: 33px;
+          font-size: 55px;
           font-family: 'Roboto', sans-serif;
           font-weight: bold;
           text-transform: capitalize;
@@ -43,13 +43,13 @@
             font-size: 40px;
             text-align: center;
           }
-          @include medium-screen-down {
+          @include medium-screen {
             text-align: center;
             font-size: 40px;
           }
           @include small-screen {
             text-align: center;
-            font-size: 25px;
+            font-size: 28px;
           }
         }
         p {
@@ -59,6 +59,16 @@
           letter-spacing: 1px;
           padding-left: 5px;
           font-weight: 700;
+          color: #0b192c;
+          // background-color: white;
+          // background-image: linear-gradient(to right, transparent);
+          background-image: linear-gradient(
+            90deg,
+            rgba(245, 245, 245, 1) 0%,
+            rgba(255, 102, 0, 1) 100%
+          );
+          border-radius: 10px;
+          padding: 10px;
           @include large-screen {
             text-align: center;
           }

@@ -17,8 +17,6 @@ section {
 main {
   margin: 0 auto;
   header {
-    // background-color: #8ec3b0;
-    // background-color: tomato;
     background-color: #ff6500;
     nav {
       box-shadow: 0 0 10px black;
@@ -37,28 +35,34 @@ main {
       .nav__links {
         display: flex;
         align-items: center;
+        @include medium-screen-down {
+          flex-direction: row-reverse;
+        }
         gap: 0px 40px;
         ul {
           display: flex;
           gap: 0px 30px;
-          @include small-screen {
+          @include medium-screen-down {
             display: none;
             position: absolute;
             flex-direction: column;
-            top: 45px;
-            right: 0px;
-            gap: 10px;
-            padding: 10px;
-            width: 150px;
+            align-items: center;
+            gap: 10px 0px;
+            width: 100vw;
+            top: 80px;
+            right: 0;
             border-radius: 7px;
             z-index: 100;
+            background-color: white;
+            box-shadow: 0 5px 10px #0b192c;
           }
 
           li {
-            @include small-screen {
-              &:hover {
-                margin-left: 7px;
-              }
+            @include medium-screen-down {
+              padding: 20px;
+              border-bottom: 1px solid black;
+              width: 100%;
+              text-align: center;
             }
             position: relative;
             &:hover {
@@ -70,23 +74,23 @@ main {
                 background-color: black;
                 bottom: -5px;
                 animation: border 0.5s 1 forwards;
+                @include medium-screen-down {
+                  animation: none;
+                }
               }
             }
             a {
               @include small-screen {
                 font-size: 15px;
               }
+              @include medium-screen-down {
+                color: black;
+              }
               color: white;
               font-size: 18px;
               font-weight: 500;
               letter-spacing: 2px;
-              &:hover {
-                transition: all 0.5s;
-              }
-            }
-            &:hover {
-              transform: translateY(-2px);
-              transition: all 0.5s;
+              display: block;
             }
           }
         }
@@ -107,6 +111,23 @@ main {
             border-radius: 50%;
           }
         }
+
+        &--hamburger {
+          @include medium-screen-down {
+            display: flex;
+            flex-direction: column;
+            gap: 3px 0px;
+          }
+          display: none;
+          &:first-of-type {
+            caret-color: #ff6500;
+          }
+          .span {
+            width: 35px;
+            height: 4px;
+            background-color: white;
+          }
+        }
       }
     }
   }
@@ -119,4 +140,17 @@ main {
 }
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+.span-top {
+  transform: translate(-5px, 6px) rotate(40deg);
+}
+
+.span-center {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.span-end {
+  transform: translate(-5px, -8px) rotate(-40deg);
 }
