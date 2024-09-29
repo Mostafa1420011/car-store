@@ -39,3 +39,9 @@ $extra-large-screen: 1200px;
     @content;
   }
 }
+
+@mixin ultra-large-screen {
+  @media (min-width: 1201px) {
+    @content;
+  }
+}
