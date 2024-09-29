@@ -269,7 +269,7 @@ main header nav .nav__links--themes span {
 }
 @media (max-width: 600px) {
   .main__hero__image::after {
-    transform: rotateX(80deg) translate3d(3px, -50px, -103px);
+    transform: rotateX(80deg) translate3d(3px, -50px, -76px);
   }
 }
 .main__hero__image img {
