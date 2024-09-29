@@ -95,58 +95,36 @@
       @include large-screen {
         width: 90%;
       }
+      @include small-screen {
+        width: 100%;
+      }
       @include medium-screen-down {
         width: 100%;
       }
       width: 55%;
-      height: 400px;
       display: flex;
       align-items: center;
       position: relative;
       scroll-snap-type: x mandatory;
-      position: relative;
       z-index: 1;
       &::after {
-        @include extra-large-screen {
-          transform: rotateX(80deg) translate3d(20px, -1px, -68px);
-        }
-        @include large-screen {
-          transform: rotateX(80deg) translate3d(17px, 8px, -137px);
-        }
-        @include medium-screen {
-          transform: rotateX(80deg) translate3d(26px, -2px, -96px);
-        }
-        @include small-screen {
-          transform: rotateX(80deg) translate3d(14px, 1px, -89px);
-        }
         z-index: -1;
         content: '';
         position: absolute;
-        width: 95%;
-        height: 95%;
+        width: 100%;
+        height: 100%;
         background-color: white;
-        transform: rotateX(80deg) translate3d(0, 0, -70px);
         border-radius: 50%;
+        transform: rotateX(80deg) translate3d(3px, -50px, -103px);
+        @include small-screen {
+          transform: rotateX(80deg) translate3d(3px, -50px, -103px);
+        }
       }
       img {
         scroll-snap-align: start;
         width: 100%;
         height: auto;
         animation: scroll 5s 3;
-        position: absolute;
-        left: 0px;
-        @include extra-large-screen {
-          transform: scale(1.1);
-        }
-        @include large-screen {
-          transform: scale(1.1) translate3d(-15px, 47px, 42px);
-        }
-        @include medium-screen {
-          transform: translateZ(90px);
-        }
-        @include small-screen {
-          transform: scale(1.1) translate3d(-15px, 47px, 42px);
-        }
       }
     }
   }
