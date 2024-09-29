@@ -495,6 +495,18 @@ main header nav .nav__links--hamburger .span {
   color: white;
   font-weight: 500;
 }
+.main__services__content--details--box a {
+  background-color: white;
+  padding: 10px 70px;
+  border-radius: 10px;
+  color: #ff6500;
+  font-size: 20px;
+  font-weight: 800;
+}
+.main__services__content--details--box a:hover {
+  transform: scale(0.9);
+  transition: all 0.5s;
+}
 
 @keyframes rotate {
   to {
