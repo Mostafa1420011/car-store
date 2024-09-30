@@ -178,7 +178,6 @@ main header nav .nav__links--hamburger .span {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   gap: 0px 5%;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -343,7 +342,6 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__services {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 40px 0px;

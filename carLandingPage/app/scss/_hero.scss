@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+
     gap: 0px 5%;
     @include large-screen {
       flex-direction: column-reverse;
