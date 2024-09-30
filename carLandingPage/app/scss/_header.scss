@@ -5,6 +5,7 @@
   border: none;
   list-style: none;
   font-family: 'Nunito Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -12,6 +13,9 @@ a {
 }
 section {
   min-height: 100px;
+  &:not(.main__hero) {
+    margin-top: 100px;
+  }
 }
 
 main {

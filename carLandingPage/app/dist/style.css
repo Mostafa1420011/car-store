@@ -5,6 +5,7 @@
   border: none;
   list-style: none;
   font-family: "Nunito Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -13,6 +14,9 @@ a {
 
 section {
   min-height: 100px;
+}
+section:not(.main__hero) {
+  margin-top: 100px;
 }
 
 main {
@@ -174,6 +178,7 @@ main header nav .nav__links--hamburger .span {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
   gap: 0px 5%;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -288,7 +293,6 @@ main header nav .nav__links--hamburger .span {
   display: flex;
   align-items: center;
   position: relative;
-  scroll-snap-type: x mandatory;
   z-index: 1;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -322,7 +326,6 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__hero__image img {
-  scroll-snap-align: start;
   width: 100%;
   height: auto;
   animation: scroll 5s 3;
@@ -340,176 +343,118 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__services {
-  display: flex;
-  gap: 0px 10px;
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .main__services {
-    flex-direction: column;
-  }
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  .main__services {
-    flex-direction: column;
-  }
-}
-@media (max-width: 600px) {
-  .main__services {
-    flex-direction: column;
-  }
-}
-.main__services__images {
-  width: 50%;
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .main__services__images {
-    width: 100%;
-  }
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  .main__services__images {
-    width: 100%;
-  }
-}
-@media (max-width: 600px) {
-  .main__services__images {
-    width: 100%;
-  }
-}
-.main__services__images img {
-  width: 100%;
-}
-.main__services__content {
-  width: 50%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  gap: 20px 0px;
+  gap: 40px 0px;
 }
-@media (min-width: 769px) and (max-width: 1024px) {
-  .main__services__content {
-    width: 100%;
-  }
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  .main__services__content {
-    width: 100%;
-  }
-}
-@media (max-width: 600px) {
-  .main__services__content {
-    width: 100%;
-  }
-}
-.main__services__content--title {
+.main__services__title {
+  background: url(../img/services.jpg) no-repeat fixed 50%/cover;
   padding-left: 10px;
-  width: 98%;
+  width: 90%;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-self: center;
+  height: 40%;
+  background-color: #ff6500;
 }
-.main__services__content--title h1 {
+.main__services__title h1 {
   text-align: center;
-  font-size: 80px;
+  font-size: 100px;
   font-weight: 700;
   color: #ff6500;
 }
-.main__services__content--title h1 span {
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main__services__title h1 {
+    font-size: 100px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__services__title h1 {
+    font-size: 80px;
+  }
+}
+@media (max-width: 600px) {
+  .main__services__title h1 {
+    font-size: 40px;
+  }
+}
+.main__services__title h1 span {
   color: #0b192c;
 }
-.main__services__content--title p {
+.main__services__title p {
   color: white;
+  font-weight: 600;
   border-radius: 10px;
   font-size: 20px;
   font-weight: 600;
-  background-color: #ff6500;
+  text-align: center;
   padding: 10px;
-}
-.main__services__content--details {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px 0px;
+  margin-right: 10px;
 }
 @media (max-width: 600px) {
-  .main__services__content--details {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+  .main__services__title p {
+    font-size: 16px;
   }
 }
-.main__services__content--details--box {
-  justify-self: center;
+.main__services__primary {
   width: 90%;
-  background-color: white;
-  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  gap: 0px 10px;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main__services__primary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .main__services__primary {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+.main__services__primary--box {
+  background-color: #0b192c;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px 0px;
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
-  padding: 20px;
+  box-shadow: 0 0 10px #ff6500 inset;
+  border-radius: 20px;
 }
-.main__services__content--details--box::before {
-  z-index: -1;
-  width: 50%;
-  height: 190%;
-  top: -90px;
-  position: absolute;
-  content: "";
-  background-color: #ff6500;
-  animation: rotate infinite 3s linear;
-}
-.main__services__content--details--box::after {
-  content: "";
-  z-index: -1;
-  width: 97%;
-  height: 97%;
-  position: absolute;
-  background-color: #0b192c;
-  top: 6px;
-  border-radius: 10px;
-}
-.main__services__content--details--box span {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  background-color: white;
+.main__services__primary--box--image {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  border-radius: 20px 20px 0px 0px;
 }
-.main__services__content--details--box span i {
+.main__services__primary--box--image img {
+  width: 100%;
+}
+.main__services__primary--box--image img:hover {
+  scale: 1.2;
+}
+.main__services__primary--box--content {
+  padding: 15px;
+}
+.main__services__primary--box--content h4 {
+  font-size: 35px;
   color: #ff6500;
-  font-size: 50px;
 }
-.main__services__content--details--box h3 {
-  font-size: 40px;
-  color: #ff6500;
-}
-.main__services__content--details--box p {
-  text-align: center;
-  font-size: 18px;
+.main__services__primary--box--content p {
   color: white;
-  font-weight: 500;
-}
-.main__services__content--details--box a {
-  background-color: white;
-  padding: 10px 70px;
-  border-radius: 10px;
-  color: #ff6500;
-  font-size: 20px;
-  font-weight: 800;
-}
-.main__services__content--details--box a:hover {
-  transform: scale(0.9);
-  transition: all 0.5s;
+  line-height: 2;
+  font-weight: 600;
 }
 
 @keyframes rotate {
   to {
     transform: rotate(360deg);
   }
+}
+::-webkit-scrollbar {
+  height: 0;
 }/*# sourceMappingURL=style.css.map */

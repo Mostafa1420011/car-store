@@ -1,150 +1,95 @@
 .main {
   &__services {
-    @include large-screen {
-      flex-direction: column;
-    }
-
-    @include medium-screen {
-      flex-direction: column;
-    }
-
-    @include small-screen {
-      flex-direction: column;
-    }
+    height: 100vh;
     display: flex;
-    gap: 0px 10px;
-    &__images {
-      width: 50%;
-      @include large-screen {
-        width: 100%;
+    flex-direction: column;
+    gap: 40px 0px;
+    &__title {
+      background: url(../img/services.jpg) no-repeat fixed 50% / cover;
+      padding-left: 10px;
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-self: center;
+      height: 40%;
+      background-color: #ff6500;
+      h1 {
+        @include large-screen {
+          font-size: 100px;
+        }
+        @include medium-screen {
+          font-size: 80px;
+        }
+
+        @include small-screen {
+          font-size: 40px;
+        }
+        text-align: center;
+        font-size: 100px;
+        font-weight: 700;
+        color: #ff6500;
+        span {
+          color: #0b192c;
+        }
       }
-      @include medium-screen {
-        width: 100%;
-      }
-      @include small-screen {
-        width: 100%;
-      }
-      img {
-        width: 100%;
+      p {
+        @include small-screen {
+          font-size: 16px;
+        }
+        color: white;
+        font-weight: 600;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        padding: 10px;
+        margin-right: 10px;
       }
     }
-
-    &__content {
+    &__primary {
+      width: 90%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 0 auto;
+      gap: 0px 10px;
       @include large-screen {
-        width: 100%;
-      }
-      @include medium-screen {
-        width: 100%;
-      }
-      @include small-screen {
-        width: 100%;
-      }
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      gap: 20px 0px;
-      &--title {
-        padding-left: 10px;
-        width: 98%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        h1 {
-          text-align: center;
-          font-size: 80px;
-          font-weight: 700;
-          color: #ff6500;
-          span {
-            color: #0b192c;
-          }
-        }
-        p {
-          color: white;
-          border-radius: 10px;
-          font-size: 20px;
-          font-weight: 600;
-          background-color: #ff6500;
-          padding: 10px;
-        }
-      }
-      &--details {
-        width: 100%;
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        @include small-screen {
-          grid-template-columns: 1fr;
-          grid-template-rows: 1fr;
-        }
-        gap: 20px 0px;
-        &--box {
-          justify-self: center;
-          width: 90%;
-          background-color: white;
-          border-radius: 10px;
+        gap: 20px;
+      }
+      @include medium-screen-down {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+      }
+      &--box {
+        background-color: #0b192c;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 10px #ff6500 inset;
+        border-radius: 20px;
+        &--image {
           display: flex;
-          flex-direction: column;
+          justify-content: center;
           align-items: center;
-          gap: 20px 0px;
           overflow: hidden;
-          position: relative;
-          z-index: 2;
-          padding: 20px;
-          &::before {
-            z-index: -1;
-            width: 50%;
-            height: 190%;
-            top: -90px;
-            position: absolute;
-            content: '';
-            background-color: #ff6500;
-            animation: rotate infinite 3s linear;
-          }
-          &::after {
-            content: '';
-            z-index: -1;
-            width: 97%;
-            height: 97%;
-            position: absolute;
-            background-color: #0b192c;
-            top: 6px;
-            border-radius: 10px;
-          }
-          span {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            i {
-              color: #ff6500;
-              font-size: 50px;
+          border-radius: 20px 20px 0px 0px;
+          img {
+            width: 100%;
+            &:hover {
+              scale: 1.2;
             }
           }
-          h3 {
-            font-size: 40px;
+        }
+        &--content {
+          padding: 15px;
+          h4 {
+            font-size: 35px;
             color: #ff6500;
           }
           p {
-            text-align: center;
-            font-size: 18px;
             color: white;
-            font-weight: 500;
-          }
-          a {
-            background-color: white;
-            padding: 10px 70px;
-            border-radius: 10px;
-            color: #ff6500;
-            font-size: 20px;
-            font-weight: 800;
-            &:hover {
-              transform: scale(0.9);
-              transition: all 0.5s;
-            }
+            line-height: 2;
+            font-weight: 600;
           }
         }
       }
@@ -156,4 +101,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+::-webkit-scrollbar {
+  // width: 0;
+  height: 0;
 }
