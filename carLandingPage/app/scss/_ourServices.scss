@@ -2,7 +2,7 @@
   &__services {
     display: flex;
     flex-direction: column;
-    gap: 40px 0px;
+    gap: 120px 0px;
     &__title {
       background: url(../img/services.jpg) no-repeat fixed 50% / cover;
       padding-left: 10px;
@@ -36,8 +36,8 @@
         @include small-screen {
           font-size: 16px;
         }
-        color: white;
-        font-weight: 600;
+        color: #0b192c;
+        font-weight: 900;
         border-radius: 10px;
         font-size: 20px;
         font-weight: 600;
@@ -46,61 +46,201 @@
         margin-right: 10px;
       }
     }
-    &__primary {
-      width: 90%;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      margin: 0 auto;
-      gap: 0px 10px;
-      @include large-screen {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-      @include medium-screen-down {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 20px;
-      }
-      &--box {
-        background-color: #0b192c;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0 0 10px #ff6500 inset;
-        border-radius: 20px;
-        &--image {
+
+    &__options {
+      display: flex;
+      flex-direction: column;
+      gap: 120px 0px;
+      &__primary {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0 auto;
+        gap: 0px 10px;
+        @include large-screen {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        @include medium-screen-down {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 20px;
+        }
+        &--box {
+          background-color: #0b192c;
           display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden;
-          border-radius: 20px 20px 0px 0px;
-          img {
-            width: 100%;
-            &:hover {
-              scale: 1.2;
+          flex-direction: column;
+          box-shadow: 0 0 10px #ff6500 inset;
+          border-radius: 20px;
+          &--image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 20px 20px 0px 0px;
+            img {
+              width: 100%;
+              &:hover {
+                scale: 1.2;
+              }
+            }
+          }
+          &--content {
+            position: relative;
+            padding: 15px;
+            h4 {
+              font-size: 35px;
+              color: #ff6500;
+            }
+            p {
+              color: white;
+              line-height: 2;
+              font-weight: 600;
             }
           }
         }
-        &--content {
-          padding: 15px;
-          h4 {
-            font-size: 35px;
-            color: #ff6500;
+      }
+      &__another {
+        border-radius: 20px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0px;
+        min-height: 200px;
+        &--title {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 15px 0px;
+          h1 {
+            font-size: 90px;
+            @include large-screen {
+              font-size: 70px;
+            }
+            @include medium-screen {
+              font-size: 50px;
+            }
+            @include small-screen {
+              font-size: 30px;
+            }
+            span {
+              color: #ff6500;
+            }
           }
           p {
-            color: white;
-            line-height: 2;
+            @include large-screen {
+              font-size: 20px;
+            }
+            @include medium-screen {
+              font-size: 16px;
+            }
+            @include small-screen {
+              font-size: 14px;
+            }
+            font-size: 25px;
             font-weight: 600;
+            text-align: center;
+          }
+        }
+        .insurance {
+          @include extra-large-screen {
+            flex-direction: column;
+          }
+          @include large-screen {
+            flex-direction: column;
+          }
+          @include medium-screen {
+            flex-direction: column;
+          }
+          @include small-screen {
+            flex-direction: column;
+          }
+        }
+        &__content {
+          border-radius: 20px;
+          width: 90%;
+          background-color: #0b192c;
+          margin: 0 auto;
+          display: flex;
+          @include ultra-large-screen {
+            flex-direction: row;
+          }
+          flex-direction: column-reverse;
+          &--image {
+            @include ultra-large-screen {
+              width: 50%;
+            }
+            width: 100%;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              border-radius: 20px;
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          &--details {
+            @include ultra-large-screen {
+              width: 50%;
+            }
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px 0px;
+            h1 {
+              color: white;
+              font-size: 40px;
+              @include small-screen {
+                font-size: 22px;
+              }
+            }
+            ul {
+              display: flex;
+              flex-direction: column;
+              padding-left: 40px;
+              gap: 20px 0px;
+              li {
+                counter-increment: count;
+                position: relative;
+                color: white;
+                font-weight: 400;
+                font-size: 15px;
+                span {
+                  font-weight: 700;
+                  color: #ff6500;
+                  font-size: 18px;
+                }
+                &::after {
+                  content: counter(count);
+                  position: absolute;
+                  width: 30px;
+                  height: 20px;
+                  text-align: center;
+                  border-radius: 10px;
+                  background-color: #ff6500;
+                  color: white;
+                  left: -40px;
+                  top: 3px;
+                }
+              }
+            }
           }
         }
       }
     }
   }
 }
-
 @keyframes rotate {
   to {
     transform: rotate(360deg);
   }
 }
+
 ::-webkit-scrollbar {
   // width: 0;
   height: 0;
