@@ -40,11 +40,3 @@ span.forEach((ele) => {
 });
 
 hamburger.addEventListener('click', changeHamburger);
-
-const box = document.querySelectorAll('.box');
-
-// box.forEach((ele) => {
-//   setInterval(() => {
-//     ele.classList.toggle('translate');
-//   }, 3000);
-// });

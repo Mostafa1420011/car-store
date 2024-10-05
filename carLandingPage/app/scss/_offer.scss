@@ -1,0 +1,136 @@
+.main {
+  &__offers {
+    display: flex;
+    flex-direction: column;
+    gap: 50px 0px;
+    &--title {
+      position: relative;
+      overflow: hidden;
+      video {
+        width: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+      }
+      width: 100vw;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px 0px;
+      height: 400px;
+      h1 {
+        font-size: 120px;
+        color: #ff6500;
+      }
+      p {
+        color: white;
+        font-size: 25px;
+        text-align: center;
+      }
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 50px 0px;
+      width: 90%;
+      margin: 0 auto;
+      &--links {
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0px 40px;
+          li {
+            background-color: #ff6500;
+            padding: 10px 20px;
+            border-radius: 20px;
+            a {
+              color: white;
+              display: block;
+            }
+            &:hover {
+              background-color: #0b192c;
+              transition: margin-top, background-color 0.5s;
+              margin-top: -5px;
+            }
+          }
+        }
+      }
+      &--boxs {
+        background-color: #0b192c;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        @include large-screen {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        @include medium-screen {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+        @include small-screen {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 20px;
+        }
+        &--box {
+          border-radius: 15px;
+          background-color: white;
+          border: 1px solid #0b192c;
+          img {
+            width: 100%;
+            border-radius: 15px;
+          }
+          &--details {
+            display: flex;
+            flex-direction: column;
+            gap: 10px 0px;
+            padding: 15px;
+            h4 {
+              font-size: 40px;
+            }
+            &--type {
+              display: flex;
+              gap: 0px 10px;
+              i {
+                color: #0b192c;
+                font-size: 20px;
+              }
+              p {
+                font-size: 18px;
+                color: #0b192c;
+              }
+            }
+            &--prise {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              h1 {
+                font-size: 30px;
+              }
+              a {
+                background-color: #0b192c;
+                padding: 10px;
+                border-radius: 10px;
+                color: white;
+                font-weight: 700;
+                &:hover {
+                  background-color: white;
+                  color: #0b192c;
+                  font-weight: 700;
+                  transition: background-color 0.5s, color 0.5s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

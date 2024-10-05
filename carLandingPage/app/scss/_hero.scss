@@ -2,6 +2,7 @@
   overflow-x: hidden;
   max-width: 1800px;
   &__hero {
+    height: 100vh;
     padding: 20px;
     background-color: #ff6500;
     display: flex;
@@ -37,7 +38,6 @@
           color: white;
           font-size: 55px;
           font-family: 'Roboto', sans-serif;
-          font-weight: bold;
           text-transform: capitalize;
           @include large-screen {
             font-size: 40px;

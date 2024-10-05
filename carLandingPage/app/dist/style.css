@@ -173,6 +173,7 @@ main header nav .nav__links--hamburger .span {
   max-width: 1800px;
 }
 .main__hero {
+  height: 100vh;
   padding: 20px;
   background-color: #ff6500;
   display: flex;
@@ -218,7 +219,6 @@ main header nav .nav__links--hamburger .span {
   color: white;
   font-size: 55px;
   font-family: "Roboto", sans-serif;
-  font-weight: bold;
   text-transform: capitalize;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -349,12 +349,12 @@ main header nav .nav__links--hamburger .span {
 .main__services__title {
   background: url(../img/services.jpg) no-repeat fixed 50%/cover;
   padding-left: 10px;
-  width: 90%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-self: center;
-  height: 40%;
+  height: 400px;
   background-color: #ff6500;
 }
 .main__services__title h1 {
@@ -439,6 +439,7 @@ main header nav .nav__links--hamburger .span {
 }
 .main__services__options__primary--box--image img:hover {
   scale: 1.2;
+  transition: scale 0.6s;
 }
 .main__services__options__primary--box--content {
   position: relative;
@@ -619,4 +620,143 @@ main header nav .nav__links--hamburger .span {
 }
 ::-webkit-scrollbar {
   height: 0;
+}
+
+.main__offers {
+  display: flex;
+  flex-direction: column;
+  gap: 50px 0px;
+}
+.main__offers--title {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px 0px;
+  height: 400px;
+}
+.main__offers--title video {
+  width: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.main__offers--title h1 {
+  font-size: 120px;
+  color: #ff6500;
+}
+.main__offers--title p {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+.main__offers__container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px 0px;
+  width: 90%;
+  margin: 0 auto;
+}
+.main__offers__container--links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 40px;
+}
+.main__offers__container--links ul li {
+  background-color: #ff6500;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+.main__offers__container--links ul li a {
+  color: white;
+  display: block;
+}
+.main__offers__container--links ul li:hover {
+  background-color: #0b192c;
+  transition: margin-top, background-color 0.5s;
+  margin-top: -5px;
+}
+.main__offers__container--boxs {
+  background-color: #0b192c;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main__offers__container--boxs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__offers__container--boxs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .main__offers__container--boxs {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+.main__offers__container--boxs--box {
+  border-radius: 15px;
+  background-color: white;
+  border: 1px solid #0b192c;
+}
+.main__offers__container--boxs--box img {
+  width: 100%;
+  border-radius: 15px;
+}
+.main__offers__container--boxs--box--details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0px;
+  padding: 15px;
+}
+.main__offers__container--boxs--box--details h4 {
+  font-size: 40px;
+}
+.main__offers__container--boxs--box--details--type {
+  display: flex;
+  gap: 0px 10px;
+}
+.main__offers__container--boxs--box--details--type i {
+  color: #0b192c;
+  font-size: 20px;
+}
+.main__offers__container--boxs--box--details--type p {
+  font-size: 18px;
+  color: #0b192c;
+}
+.main__offers__container--boxs--box--details--prise {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__offers__container--boxs--box--details--prise h1 {
+  font-size: 30px;
+}
+.main__offers__container--boxs--box--details--prise a {
+  background-color: #0b192c;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+}
+.main__offers__container--boxs--box--details--prise a:hover {
+  background-color: white;
+  color: #0b192c;
+  font-weight: 700;
+  transition: background-color 0.5s, color 0.5s;
 }/*# sourceMappingURL=style.css.map */
