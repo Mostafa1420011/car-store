@@ -628,12 +628,6 @@ main header nav .nav__links--hamburger .span {
   gap: 50px 0px;
 }
 .main__offers--title {
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -641,20 +635,24 @@ main header nav .nav__links--hamburger .span {
   gap: 20px 0px;
   height: 400px;
 }
-.main__offers--title video {
-  width: 100%;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-}
 .main__offers--title h1 {
   font-size: 120px;
   color: #ff6500;
 }
+@media (max-width: 600px) {
+  .main__offers--title h1 {
+    font-size: 50px;
+  }
+}
 .main__offers--title p {
-  color: white;
+  color: #0b192c;
   font-size: 25px;
   text-align: center;
+}
+@media (max-width: 600px) {
+  .main__offers--title p {
+    font-size: 16px;
+  }
 }
 .main__offers__container {
   display: flex;
@@ -669,22 +667,76 @@ main header nav .nav__links--hamburger .span {
   align-items: center;
   gap: 0px 40px;
 }
+@media (max-width: 600px) {
+  .main__offers__container--links ul {
+    gap: 0px 10px;
+  }
+}
 .main__offers__container--links ul li {
   background-color: #ff6500;
   padding: 10px 20px;
   border-radius: 20px;
-}
-.main__offers__container--links ul li a {
   color: white;
-  display: block;
+}
+@media (max-width: 600px) {
+  .main__offers__container--links ul li {
+    font-size: 13px;
+  }
 }
 .main__offers__container--links ul li:hover {
   background-color: #0b192c;
   transition: margin-top, background-color 0.5s;
   margin-top: -5px;
+  cursor: pointer;
+}
+.main__offers__container .boxSpecial {
+  position: relative;
+}
+.main__offers__container .boxSpecial span {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  top: -5px;
+  z-index: 10;
+  right: -5px;
+  font-size: 12px;
+  text-align: center;
+  color: #ff6500;
+  font-weight: 600;
+  border: #0b192c 3px solid;
+  border-top: solid 1px #0b192c;
+  border-right: solid 1px #0b192c;
+  border-radius: 0px 10px 0px 10px;
+}
+.main__offers__container .boxLatest {
+  position: relative;
+}
+.main__offers__container .boxLatest::after {
+  content: "40% descound";
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  top: -5px;
+  z-index: 10;
+  right: -5px;
+  font-size: 12px;
+  text-align: center;
+  color: #ff6500;
+  font-weight: 600;
+  border: #0b192c 3px solid;
+  border-top: solid 1px #0b192c;
+  border-right: solid 1px #0b192c;
+  border-radius: 0px 10px 0px 10px;
 }
 .main__offers__container--boxs {
-  background-color: #0b192c;
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -710,51 +762,46 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__offers__container--boxs--box {
+  background-image: radial-gradient(circle, rgb(68, 68, 68) 0%, rgb(0, 0, 0) 100%);
+  border: 5px solid #0b192c;
+  padding: 15px;
   border-radius: 15px;
   background-color: white;
-  border: 1px solid #0b192c;
 }
 .main__offers__container--boxs--box img {
   width: 100%;
   border-radius: 15px;
 }
+.main__offers__container--boxs--box--prise {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.main__offers__container--boxs--box--prise h1 {
+  color: #ff6500;
+  font-size: 30px;
+}
+.main__offers__container--boxs--box--prise p {
+  color: white;
+}
 .main__offers__container--boxs--box--details {
   display: flex;
   flex-direction: column;
   gap: 10px 0px;
-  padding: 15px;
 }
 .main__offers__container--boxs--box--details h4 {
   font-size: 40px;
+  color: white;
 }
-.main__offers__container--boxs--box--details--type {
-  display: flex;
-  gap: 0px 10px;
-}
-.main__offers__container--boxs--box--details--type i {
-  color: #0b192c;
-  font-size: 20px;
-}
-.main__offers__container--boxs--box--details--type p {
-  font-size: 18px;
-  color: #0b192c;
-}
-.main__offers__container--boxs--box--details--prise {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.main__offers__container--boxs--box--details--prise h1 {
-  font-size: 30px;
-}
-.main__offers__container--boxs--box--details--prise a {
-  background-color: #0b192c;
+.main__offers__container--boxs--box--details a {
   padding: 10px;
   border-radius: 10px;
   color: white;
   font-weight: 700;
+  text-align: center;
+  background-color: #ff6500;
 }
-.main__offers__container--boxs--box--details--prise a:hover {
+.main__offers__container--boxs--box--details a:hover {
   background-color: white;
   color: #0b192c;
   font-weight: 700;

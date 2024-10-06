@@ -40,3 +40,46 @@ span.forEach((ele) => {
 });
 
 hamburger.addEventListener('click', changeHamburger);
+
+const LatestOfferBtn = document.querySelector('.Latest');
+const SpecialDiscountsBtn = document.querySelector('.Special');
+const allBtn = document.querySelector('.All');
+const box = document.querySelectorAll('.box');
+
+const select = (value) => {
+  box.forEach((ele) => {
+    ele.classList.contains(value)
+      ? (ele.style.display = 'grid')
+      : (ele.style.display = 'none');
+  });
+};
+allBtn.addEventListener('click', () => select('box'));
+LatestOfferBtn.addEventListener('click', () => select('boxLatest'));
+SpecialDiscountsBtn.addEventListener('click', () => select('boxSpecial'));
+
+let sec = 60;
+let min = 60;
+let hour = 24;
+
+const time = () => {
+  const spe = document.querySelectorAll('.spn');
+  if (sec > 0) {
+    sec--;
+  } else if (min > 0) {
+    sec = 60;
+    min--;
+  } else if (hour > 0) {
+    sec = 60;
+    min = 60;
+    hour--;
+  } else {
+    clearInterval(loop);
+  }
+  let time1 = `${hour}h  ${min}m  ${sec}s `;
+  spe.forEach((ele) => {
+    ele.innerHTML = time1;
+  });
+};
+let loop = setInterval(() => {
+  time();
+}, 1000);
