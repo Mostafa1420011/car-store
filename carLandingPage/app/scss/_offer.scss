@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
     gap: 50px 0px;
-    &--title {
+    &__title {
+      background: url(../img/our\ offera.jpeg) no-repeat fixed 50% / cover;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -16,11 +17,15 @@
         @include small-screen {
           font-size: 50px;
         }
+        span {
+          color: #0b192c;
+        }
       }
       p {
-        color: #0b192c;
+        color: white;
         font-size: 25px;
         text-align: center;
+        font-weight: 600;
         @include small-screen {
           font-size: 16px;
         }
@@ -177,5 +182,212 @@
         }
       }
     }
+    &__slider {
+      width: 88%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 70px 0px;
+      &--title {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0px;
+        text-align: center;
+        h1 {
+          @include large-screen {
+            font-size: 50px;
+          }
+          @include medium-screen {
+            font-size: 50px;
+          }
+          @include small-screen {
+            font-size: 30px;
+          }
+          font-size: 100px;
+          text-transform: capitalize;
+          color: #ff6500;
+          span {
+            color: #0b192c;
+            display: inline-block;
+          }
+        }
+        p {
+          font-size: 20px;
+          font-weight: 600;
+          color: #0b192c;
+          @include large-screen {
+            font-size: 16px;
+          }
+
+          @include medium-screen {
+            font-size: 16px;
+          }
+          @include small-screen {
+            font-size: 16px;
+          }
+        }
+      }
+      &--boxs {
+        position: relative;
+        .slide_offer {
+          z-index: 10;
+          position: absolute;
+          top: 0px;
+          right: 10px;
+          background-color: #0b192c;
+          border-radius: 0px 0px 15px 15px;
+          width: 40%;
+          height: 20px;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 14px;
+          @include extra-large-screen {
+            font-size: 20px;
+            width: 20%;
+            height: 40px;
+          }
+          @include ultra-large-screen {
+            font-size: 25px;
+            width: 20%;
+            height: 40px;
+          }
+          @include large-screen {
+            font-size: 16px;
+            width: 20%;
+            height: 40px;
+          }
+          @include small-screen {
+            font-size: 10px;
+          }
+        }
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        &--box {
+          scroll-snap-align: start;
+          flex-basis: 100%;
+          flex-shrink: 0;
+          border: 1px solid #0b192c;
+          margin-bottom: 40px;
+          border-radius: 15px;
+          display: flex;
+          flex-direction: column-reverse;
+          &--info {
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px 0px;
+            background-color: #0b192c;
+            border-radius: 0px 0px 15px 15px;
+            h1 {
+              font-size: 45px;
+              color: white;
+              @include large-screen {
+                font-size: 30px;
+              }
+              @include medium-screen {
+                font-size: 30px;
+              }
+              @include small-screen {
+                font-size: 20px;
+              }
+            }
+            ul {
+              display: flex;
+              flex-direction: column;
+              gap: 20px 0px;
+              li {
+                span {
+                  color: #ff6500;
+                  font-weight: 700;
+                  font-size: 20px;
+                  @include large-screen {
+                    font-size: 18px;
+                  }
+                  @include medium-screen {
+                    font-size: 16px;
+                  }
+                  @include small-screen {
+                    font-size: 14px;
+                  }
+                }
+                @include large-screen {
+                  font-size: 16px;
+                }
+                @include medium-screen {
+                  font-size: 16px;
+                }
+                @include small-screen {
+                  font-size: 14px;
+                }
+                color: white;
+                position: relative;
+                padding-left: 40px;
+                font-size: 18px;
+                &::before {
+                  @include large-screen {
+                    font-size: 18px;
+                  }
+                  @include medium-screen {
+                    font-size: 18px;
+                  }
+                  @include small-screen {
+                    font-size: 14px;
+                  }
+                  content: 'L';
+                  position: absolute;
+                  width: 20px;
+                  height: 20px;
+                  text-align: center;
+                  transform: rotateY(177deg) rotate(-27deg);
+                  left: 5px;
+                  color: #ff6500;
+                }
+              }
+            }
+          }
+          &--images {
+            background-image: radial-gradient(
+              circle,
+              rgba(68, 68, 68, 1) 0%,
+              rgba(0, 0, 0, 1) 100%
+            );
+            border-radius: 15px 15px 0px 0px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            img {
+              width: 100%;
+              align-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.limitAnimation {
+  animation: limitAnimation 0.5s 1;
+}
+
+@keyframes limitAnimation {
+  0% {
+    transform: rotate(-5deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
   }
 }

@@ -60,6 +60,7 @@ SpecialDiscountsBtn.addEventListener('click', () => select('boxSpecial'));
 let sec = 60;
 let min = 60;
 let hour = 24;
+let days = 7;
 
 const time = () => {
   const spe = document.querySelectorAll('.spn');
@@ -80,6 +81,38 @@ const time = () => {
     ele.innerHTML = time1;
   });
 };
+
 let loop = setInterval(() => {
   time();
 }, 1000);
+
+const time2 = () => {
+  const anotherOffer = document.querySelector('.slide_offer');
+  if (sec > 0) {
+    sec--;
+  } else if (min > 0) {
+    sec = 60;
+    min--;
+  } else if (hour > 0) {
+    sec = 60;
+    min = 60;
+    hour--;
+  } else if (days > 0) {
+    sec = 60;
+    min = 60;
+    hour = 24;
+    days--;
+  } else {
+    clearInterval(loop2);
+  }
+  let time1 = `${days}d ${hour}h  ${min}m  ${sec}s `;
+  anotherOffer.innerHTML = time1;
+};
+let loop2 = setInterval(() => {
+  time2();
+}, 1000);
+
+const limited = document.querySelector('.limited');
+setInterval(() => {
+  limited.classList.toggle('limitAnimation');
+}, 2000);
