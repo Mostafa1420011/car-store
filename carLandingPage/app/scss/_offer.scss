@@ -237,7 +237,7 @@
           background-color: #0b192c;
           border-radius: 0px 0px 15px 15px;
           width: 40%;
-          height: 20px;
+          height: 40px;
           color: white;
           display: flex;
           justify-content: center;
@@ -350,6 +350,10 @@
             }
           }
           &--images {
+            @include small-screen {
+              align-content: center;
+              height: 200px;
+            }
             background-image: radial-gradient(
               circle,
               rgba(68, 68, 68, 1) 0%,

@@ -883,7 +883,7 @@ main header nav .nav__links--hamburger .span {
   background-color: #0b192c;
   border-radius: 0px 0px 15px 15px;
   width: 40%;
-  height: 20px;
+  height: 40px;
   color: white;
   display: flex;
   justify-content: center;
@@ -1031,6 +1031,12 @@ main header nav .nav__links--hamburger .span {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 600px) {
+  .main__offers__slider--boxs--box--images {
+    align-content: center;
+    height: 200px;
+  }
 }
 .main__offers__slider--boxs--box--images img {
   width: 100%;
