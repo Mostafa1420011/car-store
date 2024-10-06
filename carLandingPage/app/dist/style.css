@@ -813,7 +813,7 @@ main header nav .nav__links--hamburger .span {
   transition: background-color 0.5s, color 0.5s;
 }
 .main__offers__slider {
-  width: 88%;
+  width: 100vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -922,7 +922,6 @@ main header nav .nav__links--hamburger .span {
   flex-shrink: 0;
   border: 1px solid #0b192c;
   margin-bottom: 40px;
-  border-radius: 15px;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -933,7 +932,6 @@ main header nav .nav__links--hamburger .span {
   flex-direction: column;
   gap: 20px 0px;
   background-color: #0b192c;
-  border-radius: 0px 0px 15px 15px;
 }
 .main__offers__slider--boxs--box--info h1 {
   font-size: 45px;
@@ -1027,7 +1025,6 @@ main header nav .nav__links--hamburger .span {
 }
 .main__offers__slider--boxs--box--images {
   background-image: radial-gradient(circle, rgb(68, 68, 68) 0%, rgb(0, 0, 0) 100%);
-  border-radius: 15px 15px 0px 0px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
