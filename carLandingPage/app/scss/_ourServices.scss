@@ -101,12 +101,12 @@
         }
       }
       &__another {
-        border-radius: 20px;
-        margin-bottom: 50px;
         display: flex;
         flex-direction: column;
         gap: 20px 0px;
         min-height: 200px;
+        border-radius: 20px;
+        margin-bottom: 50px;
         &--title {
           display: flex;
           flex-direction: column;
@@ -158,8 +158,8 @@
           }
         }
         &__content {
+          width: 98%;
           border-radius: 20px;
-          width: 90%;
           background-color: #0b192c;
           margin: 0 auto;
           display: flex;

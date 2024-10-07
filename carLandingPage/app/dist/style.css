@@ -455,12 +455,12 @@ main header nav .nav__links--hamburger .span {
   font-weight: 600;
 }
 .main__services__options__another {
-  border-radius: 20px;
-  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   gap: 20px 0px;
   min-height: 200px;
+  border-radius: 20px;
+  margin-bottom: 50px;
 }
 .main__services__options__another--title {
   display: flex;
@@ -531,8 +531,8 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__services__options__another__content {
+  width: 98%;
   border-radius: 20px;
-  width: 90%;
   background-color: #0b192c;
   margin: 0 auto;
   display: flex;
