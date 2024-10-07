@@ -813,7 +813,7 @@ main header nav .nav__links--hamburger .span {
   transition: background-color 0.5s, color 0.5s;
 }
 .main__offers__slider {
-  width: 100vw;
+  width: 88%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -883,7 +883,7 @@ main header nav .nav__links--hamburger .span {
   background-color: #0b192c;
   border-radius: 0px 0px 15px 15px;
   width: 40%;
-  height: 40px;
+  height: 20px;
   color: white;
   display: flex;
   justify-content: center;
@@ -922,6 +922,7 @@ main header nav .nav__links--hamburger .span {
   flex-shrink: 0;
   border: 1px solid #0b192c;
   margin-bottom: 40px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -932,6 +933,7 @@ main header nav .nav__links--hamburger .span {
   flex-direction: column;
   gap: 20px 0px;
   background-color: #0b192c;
+  border-radius: 0px 0px 15px 15px;
 }
 .main__offers__slider--boxs--box--info h1 {
   font-size: 45px;
@@ -1025,15 +1027,10 @@ main header nav .nav__links--hamburger .span {
 }
 .main__offers__slider--boxs--box--images {
   background-image: radial-gradient(circle, rgb(68, 68, 68) 0%, rgb(0, 0, 0) 100%);
+  border-radius: 15px 15px 0px 0px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-}
-@media (max-width: 600px) {
-  .main__offers__slider--boxs--box--images {
-    align-content: center;
-    height: 200px;
-  }
 }
 .main__offers__slider--boxs--box--images img {
   width: 100%;

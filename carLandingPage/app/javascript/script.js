@@ -60,7 +60,7 @@ SpecialDiscountsBtn.addEventListener('click', () => select('boxSpecial'));
 let sec = 60;
 let min = 60;
 let hour = 24;
-let days = 6;
+let days = 7;
 
 const time = () => {
   const spe = document.querySelectorAll('.spn');
