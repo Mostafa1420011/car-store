@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- font  -->
+    <!-- Nunito sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- website icon -->
+    <link rel="icon" href="./img/car_icon_126245.webp" type="image/png" />
+    <!-- css link -->
+    <link rel="stylesheet" href="./dist/style.css" />
+    <title>car</title>
+  </head>
+  <body>
+    <main class="main">
+      <header>
+        <nav>
+          <div class="nav__icon">
+            <p>Car Store</p>
+          </div>
+
+          <div class="nav__links">
+            <ul class="ul">
+              <li class="offer"><a href="#offers"> Offers </a></li>
+              <li><a href="#services"> Our Services </a></li>
+              <li><a href="#"> Contact Us </a></li>
+            </ul>
+            <div class="nav__links--hamburger hamburger">
+              <span class="span" data-name="top"></span>
+              <span class="span" data-name="center"></span>
+              <span class="span" data-name="end"></span>
+            </div>
+
+            <div class="nav__links--themes">
+              <span class="them__toggle"></span>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section class="main__hero">
+        <div class="main__hero__content">
+          <div class="main__hero__content--title">
+            <h3>Your journey starts here !</h3>
+            <p>
+              We offer a diverse selection of new and used cars, with unique
+              options to suit all tastes and budgets. Enjoy a quick and easy
+              buying experience with comprehensive support to help you find your
+              perfect car.
+            </p>
+          </div>
+          <a href="#services" class="main__hero__content--btn"
+            >Discover Now !</a
+          >
+        </div>
+        <div class="main__hero__image">
+          <img src="./img/car1.png" class="img-change" />
+        </div>
+      </section>
+
+      <section class="main__services" id="services">
+        <div class="main__services__title">
+          <h1><span>Our</span> Services</h1>
+          <p>
+            We are a leading company in providing car rental and sales services
+            in the Arab world, offering our clients an exceptional experience
+            with a wide range of luxury and economical cars to suit all needs.
+          </p>
+        </div>
+        <div class="main__services__options">
+          <div class="main__services__options__primary">
+            <div class="main__services__options__primary--box">
+              <div class="main__services__options__primary--box--image">
+                <img src="./img/car-seel1.webp" alt="" />
+              </div>
+              <div class="main__services__options__primary--box--content">
+                <h4>Cars Sell</h4>
+                <p>
+                  We buy your cars at competitive prices, ensuring you a fair
+                  and quick deal, helping you achieve the best value for your
+                  vehicle!
+                </p>
+              </div>
+            </div>
+            <div class="main__services__options__primary--box">
+              <div class="main__services__options__primary--box--image">
+                <img src="./img/repair.jpeg" alt="" />
+              </div>
+              <div class="main__services__options__primary--box--content">
+                <h4>Cars Repair</h4>
+                <p>
+                  We make your cars as good as new through our exceptional
+                  maintenance and repair services, ensuring you excellent
+                  performance!
+                </p>
+              </div>
+            </div>
+            <div class="main__services__options__primary--box">
+              <div class="main__services__options__primary--box--image">
+                <img src="./img/car-rental.webp" alt="" />
+              </div>
+              <div class="main__services__options__primary--box--content">
+                <h4>Car Rental</h4>
+                <p>
+                  We offer you a comfortable and easy car rental experience,
+                  with a wide range of vehicles and competitive prices to suit
+                  your needs
+                </p>
+              </div>
+            </div>
+            <div class="main__services__options__primary--box">
+              <div class="main__services__options__primary--box--image">
+                <img src="./img/used-car4.jpeg" alt="" />
+              </div>
+              <div class="main__services__options__primary--box--content">
+                <h4>Car Used</h4>
+                <p>
+                  We buy used cars at the best prices with a quick and easy
+                  process, ensuring transparency and convenience at every step
+                  of the evaluation
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="main__services__options__another">
+            <div class="main__services__options__another--title">
+              <h1><span>ANOTHER</span> SERVICES</h1>
+              <p>
+                We offer a range of additional services to meet all your needs
+                with the highest quality and efficiency
+              </p>
+            </div>
+            <div class="main__services__options__another__content">
+              <div class="main__services__options__another__content--details">
+                <h1>Best Routine maintenance</h1>
+                <ul>
+                  <li>
+                    <span>Battery Maintenance </span>: Checking battery health
+                    and cleaning terminals can prevent starting issues and
+                    extend battery life.
+                  </li>
+                  <li>
+                    <span>Fluid Checks </span>: Monitoring and topping off
+                    essential fluids like coolant, brake fluid, transmission
+                    fluid, and power steering fluid
+                  </li>
+                  <li>
+                    <span>Air Filter Replacement </span>: Changing the air
+                    filter regularly improves engine efficiency and performance.
+                  </li>
+                  <li>
+                    <span>Battery Maintenance </span>: Checking battery health
+                    and cleaning terminals can prevent starting issues and
+                    extend battery life.
+                  </li>
+                </ul>
+              </div>
+              <div class="main__services__options__another__content--image">
+                <img src="./img/Routine-maintenance.jpeg" alt="img" />
+              </div>
+            </div>
+            <div class="main__services__options__another__content insurance">
+              <div class="main__services__options__another__content--image">
+                <img src="./img/car-taqmen.webp" alt="img" />
+              </div>
+              <div class="main__services__options__another__content--details">
+                <h1>Comprehensive Insurance Services</h1>
+                <ul>
+                  <li>
+                    <span>Comprehensive </span>: The website offers multiple
+                    insurance options to suit customers' needs, ranging from
+                    comprehensive insurance to third-party
+                  </li>
+                  <li>
+                    <span>Competitive Prices </span>: The website provides
+                    attractive and competitive pricing, allowing customers to
+                    compare offers from different insurance companies
+                  </li>
+                  <li>
+                    <span>Excellent Customer Service </span>: The website offers
+                    24/7 technical support to answer customer inquiries and
+                    assist with the claims process
+                  </li>
+                  <li>
+                    <span>Easy and Fast Procedures </span>: The website features
+                    an easy-to-use interface, enabling customers to carry out
+                    insurance transactions and claims quickly and smoothly
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="main__services__options__another__content">
+              <div class="main__services__options__another__content--details">
+                <h1>Customer service support</h1>
+                <ul>
+                  <li>
+                    <span>Quick and Efficient Response </span>: The customer
+                    service is characterized by quick responses to customer
+                    inquiries through various channels, including phone, email,
+                    and live chat
+                  </li>
+                  <li>
+                    <span>Comprehensive Information </span>: The customer
+                    service team provides detailed information about available
+                    cars, including specifications, prices, and financing
+                    options
+                  </li>
+                  <li>
+                    <span>After-Sales Support </span>: Customer support is
+                    available even after the purchase is completed, including
+                    assistance with registration procedures
+                  </li>
+                  <li>
+                    <span>Customer Satisfaction Surveys </span>: Periodic
+                    surveys are conducted to measure customer satisfaction and
+                    gather feedback, helping to improve service quality
+                  </li>
+                </ul>
+              </div>
+              <div class="main__services__options__another__content--image">
+                <img src="./img/contact-after.jpg" alt="img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main__offers" id="offers">
+        <div class="main__offers__title">
+          <h1><span>Our</span> Offers</h1>
+          <p>
+            Enjoy the best deals and discounts on the latest cars! Book now and
+            get exclusive benefits for a limited time
+          </p>
+        </div>
+        <div class="main__offers__container">
+          <div class="main__offers__container--links">
+            <ul>
+              <li class="All">All</li>
+              <li class="Latest">Latest Offer</li>
+              <li class="Special">Special Discounts</li>
+            </ul>
+          </div>
+          <div class="main__offers__container--boxs">
+            <div class="main__offers__container--boxs--box boxSpecial box">
+              <span class="spn"></span>
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxLatest box">
+              <span class="mo"></span>
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxSpecial box">
+              <span class="spn"></span>
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxLatest box">
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxSpecial box">
+              <span class="spn"></span>
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxLatest box">
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxSpecial box">
+              <span class="spn"></span>
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxLatest box">
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxSpecial box">
+              <span class="spn"></span>
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxLatest box">
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxSpecial box">
+              <span class="spn"></span>
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxLatest box">
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxSpecial box">
+              <span class="spn"></span>
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxLatest box">
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxSpecial box">
+              <span class="spn"></span>
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+            <div class="main__offers__container--boxs--box boxLatest box">
+              <div class="main__offers__container--boxs--box--prise">
+                <h1>$40,000</h1>
+                <p><del>$60,000</del></p>
+              </div>
+              <img src="./img/car1.png" alt="#" />
+              <div class="main__offers__container--boxs--box--details">
+                <h4>car1</h4>
+                <a href="#">Purchase Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main__offers__slider">
+          <div class="main__offers__slider--title">
+            <h1><span class="limited">Limited </span> time offers</h1>
+            <p>
+              Take advantage of the opportunity now! Limited time offers on all
+              our cars, including all services from insurance, maintenance, to
+              full warranty. Hurry before time runs out!
+            </p>
+          </div>
+          <div class="main__offers__slider--boxes boxes">
+            <span class="slide_offer"></span>
+            <div class="main__offers__slider--boxes--box box-slider">
+              <div class="main__offers__slider--boxes--box--info">
+                <h1>Special offer on spare parts!</h1>
+                <ul>
+                  <li>
+                    <span>Discounts up to 20%</span> : Enjoy up to 20% off on
+                    all spare parts
+                  </li>
+                  <li>
+                    <span>Free delivery</span> : Get free delivery on all orders
+                    over 500 EG.
+                  </li>
+                  <li>
+                    <span>Free consultation</span> : Our team of experts is
+                    available to offer free consultations to help you choose the
+                    right parts for your car
+                  </li>
+                  <li>
+                    <span>Exclusive offers for loyal customers</span> : Earn
+                    loyalty points with every purchase and enjoy exclusive
+                    offers on future purchases
+                  </li>
+                  <li>
+                    <span>Additional discounts on bundles</span> : Purchasing a
+                    set of spare parts will guarantee you an extra discount
+                  </li>
+                  <li>
+                    <span>Limited time offer</span> : Don't miss out! This offer
+                    is valid for a limited time only
+                  </li>
+                </ul>
+              </div>
+              <div class="main__offers__slider--boxes--box--images">
+                <img src="./img/car-part1.png" alt="" />
+                <img src="./img/car-part2.png" alt="" />
+                <img src="./img/car-part3.png" alt="" />
+                <img src="./img/car-part4.png" alt="" />
+              </div>
+            </div>
+            <div class="main__offers__slider--boxes--box box-slider">
+              <div class="main__offers__slider--boxes--box--info">
+                <h1>Regular maintenance services!</h1>
+                <ul>
+                  <li>
+                    <span>Oil and filter replacement</span> : engine oil and the
+                    air and oil filters maintains engine efficiency and extends
+                    its lifespan
+                  </li>
+                  <li>
+                    <span>Brake system inspection</span> : replacing brake pads
+                    and discs ensures quick and safe braking response
+                  </li>
+                  <li>
+                    <span>Battery inspection</span> :Ensuring the battery's
+                    efficiency and cleaning
+                  </li>
+                  <li>
+                    <span>Tire inspection and balancing</span> : checking tire
+                    condition and air pressure,
+                  </li>
+                  <li>
+                    <span>Vital fluid checks</span> : Checking the levels of
+                    coolant, brake fluid, and transmission fluid
+                  </li>
+                  <li>
+                    <span>Tire inspection and balancing</span> : checking tire
+                    condition and air pressure, along with balancing the tires,
+                    helps improve fuel efficiency
+                  </li>
+                </ul>
+              </div>
+              <div class="main__offers__slider--boxes--box--images">
+                <img src="./img/car-oil.png" alt="" />
+                <img src="./img/car-battery.png" alt="" />
+                <img src="./img/car-break.png" alt="" />
+                <img src="./img/car-part1.png" alt="" />
+              </div>
+            </div>
+            <div class="main__offers__slider--boxes--box box-slider">
+              <div class="main__offers__slider--boxes--box--info">
+                <h1>Regular maintenance services2!</h1>
+                <ul>
+                  <li>
+                    <span>Oil and filter replacement</span> : engine oil and the
+                    air and oil filters maintains engine efficiency and extends
+                    its lifespan
+                  </li>
+                  <li>
+                    <span>Brake system inspection</span> : replacing brake pads
+                    and discs ensures quick and safe braking response
+                  </li>
+                  <li>
+                    <span>Battery inspection</span> :Ensuring the battery's
+                    efficiency and cleaning
+                  </li>
+                  <li>
+                    <span>Tire inspection and balancing</span> : checking tire
+                    condition and air pressure,
+                  </li>
+                  <li>
+                    <span>Vital fluid checks</span> : Checking the levels of
+                    coolant, brake fluid, and transmission fluid
+                  </li>
+                  <li>
+                    <span>Tire inspection and balancing</span> : checking tire
+                    condition and air pressure, along with balancing the tires,
+                    helps improve fuel efficiency
+                  </li>
+                </ul>
+              </div>
+              <div class="main__offers__slider--boxes--box--images">
+                <img src="./img/car-oil.png" alt="" />
+                <img src="./img/car-battery.png" alt="" />
+                <img src="./img/car-break.png" alt="" />
+                <img src="./img/car-part1.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./javascript/script.js"></script>
+  </body>
+</html>
