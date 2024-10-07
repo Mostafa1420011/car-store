@@ -116,3 +116,23 @@ const limited = document.querySelector('.limited');
 setInterval(() => {
   limited.classList.toggle('limitAnimation');
 }, 2000);
+
+const slidersParent = document.querySelector('.box-parent');
+const slideBoxes = document.querySelectorAll('.box-slider');
+let sliderLength = slideBoxes.length;
+let sliderCount = 0;
+
+const sliderRun = () => {
+  sliderCount += 100;
+  if (sliderCount >= sliderLength * 100) {
+    sliderCount = 0;
+  }
+  slideBoxes.forEach((ele) => {
+    ele.style.transform = `translateX(-${sliderCount}%)`;
+    ele.style.transition = 'all 2s';
+  });
+};
+
+setInterval(() => {
+  sliderRun();
+}, 4000);
