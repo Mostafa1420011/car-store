@@ -268,6 +268,8 @@ main header nav .nav__links--hamburger .span {
   font-size: 18px;
   align-self: flex-start;
   animation: heroBtn 2s infinite;
+  width: 300px;
+  text-align: center;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .main__hero__content--btn {
@@ -285,6 +287,12 @@ main header nav .nav__links--hamburger .span {
   .main__hero__content--btn {
     margin: 0 auto;
     padding: 15px 150px;
+  }
+}
+@media (max-width: 600px) {
+  .main__hero__content--btn {
+    width: auto;
+    text-align: start;
   }
 }
 .main__hero__content--btn:hover {
@@ -678,8 +686,13 @@ main header nav .nav__links--hamburger .span {
   display: flex;
   flex-direction: column;
   gap: 50px 0px;
-  width: 90%;
+  width: 98%;
   margin: 0 auto;
+}
+@media (min-width: 1201px) {
+  .main__offers__container {
+    width: 90%;
+  }
 }
 .main__offers__container--links ul {
   display: flex;
@@ -757,28 +770,31 @@ main header nav .nav__links--hamburger .span {
   border-radius: 0px 10px 0px 10px;
 }
 .main__offers__container--boxs {
-  padding: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  padding: 20px;
   gap: 10px;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .main__offers__container--boxs {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    padding: 0;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
   .main__offers__container--boxs {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    padding: 0;
   }
 }
 @media (max-width: 600px) {
   .main__offers__container--boxs {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
+    padding: 0;
   }
 }
 .main__offers__container--boxs--box {

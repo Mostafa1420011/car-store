@@ -97,6 +97,12 @@
         font-size: 18px;
         align-self: flex-start;
         animation: heroBtn 2s infinite;
+        width: 300px;
+        text-align: center;
+        @include small-screen {
+          width: auto;
+          text-align: start;
+        }
         &:hover {
           animation-play-state: paused;
           outline: #0b192c 2px solid;

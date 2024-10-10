@@ -38,7 +38,10 @@
       display: flex;
       flex-direction: column;
       gap: 50px 0px;
-      width: 90%;
+      width: 98%;
+      @include ultra-large-screen {
+        width: 90%;
+      }
       margin: 0 auto;
       &--links {
         ul {
@@ -115,22 +118,25 @@
         position: relative;
       }
       &--boxs {
-        padding: 20px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
+        padding: 20px;
         gap: 10px;
         @include large-screen {
           grid-template-columns: repeat(2, 1fr);
           gap: 20px;
+          padding: 0;
         }
         @include medium-screen {
           grid-template-columns: repeat(2, 1fr);
           gap: 20px;
+          padding: 0;
         }
         @include small-screen {
           grid-template-columns: repeat(1, 1fr);
           gap: 20px;
+          padding: 0;
         }
 
         &--box {
