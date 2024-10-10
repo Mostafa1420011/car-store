@@ -5,6 +5,9 @@
     gap: 120px 0px;
     &__title {
       background: url(../img/services.jpg) no-repeat fixed 50% / cover;
+      @include small-screen {
+        background-attachment: scroll;
+      }
       padding-left: 10px;
       width: 100vw;
       display: flex;

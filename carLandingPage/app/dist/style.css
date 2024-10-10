@@ -362,6 +362,11 @@ main header nav .nav__links--hamburger .span {
   height: 400px;
   background-color: #ff6500;
 }
+@media (max-width: 600px) {
+  .main__services__title {
+    background-attachment: scroll;
+  }
+}
 .main__services__title h1 {
   text-align: center;
   font-size: 100px;
@@ -640,6 +645,11 @@ main header nav .nav__links--hamburger .span {
   align-items: center;
   gap: 20px 0px;
   height: 400px;
+}
+@media (max-width: 600px) {
+  .main__offers__title {
+    background-attachment: scroll;
+  }
 }
 .main__offers__title h1 {
   font-size: 120px;
