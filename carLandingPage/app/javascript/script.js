@@ -64,29 +64,6 @@ let days = 7;
 
 const time = () => {
   const spe = document.querySelectorAll('.spn');
-  if (sec > 0) {
-    sec--;
-  } else if (min > 0) {
-    sec = 60;
-    min--;
-  } else if (hour > 0) {
-    sec = 60;
-    min = 60;
-    hour--;
-  } else {
-    clearInterval(loop);
-  }
-  let time1 = `${hour}h  ${min}m  ${sec}s `;
-  spe.forEach((ele) => {
-    ele.innerHTML = time1;
-  });
-};
-
-let loop = setInterval(() => {
-  time();
-}, 1000);
-
-const time2 = () => {
   const anotherOffer = document.querySelector('.slide_offer');
   if (sec > 0) {
     sec--;
@@ -103,13 +80,17 @@ const time2 = () => {
     hour = 24;
     days--;
   } else {
-    clearInterval(loop2);
+    clearInterval(loop);
   }
-  let time1 = `${days}d ${hour}h  ${min}m  ${sec}s `;
-  anotherOffer.innerHTML = time1;
+  let time1 = `${hour}h  ${min}m  ${sec}s `;
+  anotherOffer.innerText = `${days}d ${hour}h  ${min}m  ${sec}s `;
+  spe.forEach((ele) => {
+    ele.innerHTML = time1;
+  });
 };
-let loop2 = setInterval(() => {
-  time2();
+
+let loop = setInterval(() => {
+  time();
 }, 1000);
 
 const limited = document.querySelector('.limited');
@@ -136,3 +117,15 @@ const sliderRun = () => {
 setInterval(() => {
   sliderRun();
 }, 4000);
+
+// ***********************************************//
+
+const discount = () => {
+  const getPrice = document.querySelectorAll('.boxLatest-discound del');
+  const afterDis = document.querySelectorAll('.boxLatest-price');
+  getPrice.forEach((ele, index) => {
+    const price = parseFloat(ele.innerHTML);
+    afterDis[index].innerText = `${(price * 40) / 100},000`;
+  });
+};
+discount();
