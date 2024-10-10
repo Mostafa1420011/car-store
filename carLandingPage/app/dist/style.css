@@ -1044,6 +1044,7 @@ main header nav .nav__links--hamburger .span {
 @media (max-width: 600px) {
   .main__offers__slider--boxs--box--info a {
     align-self: center;
+    padding: 10px 110px;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {

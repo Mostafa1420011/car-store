@@ -352,6 +352,7 @@
             a {
               @include small-screen {
                 align-self: center;
+                padding: 10px 110px;
               }
               @include medium-screen {
                 align-self: center;
