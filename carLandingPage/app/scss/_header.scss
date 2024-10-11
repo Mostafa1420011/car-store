@@ -13,7 +13,7 @@ a {
 }
 section {
   min-height: 100px;
-  &:not(.main__hero) {
+  &:not(.no-margin) {
     margin-top: 100px;
   }
 }

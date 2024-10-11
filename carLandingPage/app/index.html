@@ -53,7 +53,7 @@
             <ul class="ul">
               <li class="offer"><a href="#offers"> Offers </a></li>
               <li><a href="#"> About Us </a></li>
-              <li><a href="#"> Contact Us </a></li>
+              <li><a href="#contact"> Contact Us </a></li>
             </ul>
             <div class="nav__links--hamburger hamburger">
               <span class="span" data-name="top"></span>
@@ -67,7 +67,7 @@
           </div>
         </nav>
       </header>
-      <section class="main__hero">
+      <section class="main__hero no-margin">
         <div class="main__hero__content">
           <div class="main__hero__content--title">
             <h3>Your <span>journey</span> starts here !</h3>
@@ -87,7 +87,7 @@
         </div>
       </section>
 
-      <section class="main__services" id="services">
+      <section class="main__services no-margin" id="services">
         <div class="main__services__title">
           <h1><span>Our</span> Services</h1>
           <p>
@@ -255,7 +255,7 @@
         </div>
       </section>
 
-      <section class="main__offers" id="offers">
+      <section class="main__offers no-margin" id="offers">
         <div class="main__offers__title">
           <h1><span>Our</span> Offers</h1>
           <p>
@@ -626,6 +626,57 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="main__contact no-margin" id="contact">
+        <div class="main__contact__hero">
+          <div class="main__contact__hero--title">
+            <div class="main__contact__hero--title--words">
+              <h1>contact us</h1>
+              <p>
+                For any inquiries or to get in touch with us please visit our
+                Contact Us page, and we will be happy to assist you
+              </p>
+            </div>
+            <i class="fa-solid fa-angles-down"></i>
+          </div>
+        </div>
+        <div class="main__contact--content">
+          <div class="main__contact--content--images">
+            <img src="./img/customer-service3.png" alt="img" />
+          </div>
+          <form action="#">
+            <div class="username">
+              <div class="username__fname">
+                <label for="first">First</label>
+                <input required type="text" id="first" />
+              </div>
+              <div class="username__Lname">
+                <label for="last">Last</label>
+                <input required type="text" id="last" />
+              </div>
+            </div>
+            <div class="email">
+              <label for="email">Email</label>
+              <input required type="email" id="email" />
+            </div>
+            <div class="phone">
+              <label for="phone">phone Number</label>
+              <input
+                required
+                type="tel"
+                id="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{5}"
+                maxlength="11"
+              />
+            </div>
+            <div class="message">
+              <label for="mess">Message</label>
+              <textarea required id="mess"></textarea>
+            </div>
+            <input type="submit" value="send" class="submit" />
+          </form>
         </div>
       </section>
     </main>
