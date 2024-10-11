@@ -792,9 +792,11 @@ main header nav .nav__links--hamburger .span {
 }
 @media (max-width: 600px) {
   .main__offers__container--boxs {
-    grid-template-columns: repeat(1, 1fr);
+    scroll-snap-type: x mandatory;
+    display: flex;
     gap: 20px;
     padding: 0;
+    overflow: scroll;
   }
 }
 .main__offers__container--boxs--box {
@@ -806,10 +808,24 @@ main header nav .nav__links--hamburger .span {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+@media (max-width: 600px) {
+  .main__offers__container--boxs--box {
+    scroll-snap-align: start;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    grid-template-rows: none;
+    height: 100%;
+  }
+}
 .main__offers__container--boxs--box--images {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 600px) {
+  .main__offers__container--boxs--box--images {
+    height: 274px;
+  }
 }
 .main__offers__container--boxs--box--images img {
   width: 100%;
