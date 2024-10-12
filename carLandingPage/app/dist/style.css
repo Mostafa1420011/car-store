@@ -1266,7 +1266,7 @@ main header nav .nav__links--hamburger .span {
 }
 .main__contact__hero--title--words ul li .emails a:hover {
   transform: scale(1.03);
-  color: black;
+  color: #ffffff;
   transition: transform 0.5s;
 }
 .main__contact__hero form {
