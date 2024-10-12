@@ -21,9 +21,12 @@ section {
 main {
   margin: 0 auto;
   header {
-    background-color: #ff6500;
+    position: absolute;
+    // top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 100;
     nav {
-      box-shadow: 0 0 10px black;
       width: 100%;
       height: auto;
       display: flex;
@@ -90,7 +93,7 @@ main {
               @include medium-screen-down {
                 color: black;
               }
-              color: white;
+              color: #0b192c;
               font-size: 18px;
               font-weight: 500;
               letter-spacing: 2px;

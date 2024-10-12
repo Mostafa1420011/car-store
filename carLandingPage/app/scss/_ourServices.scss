@@ -69,10 +69,10 @@
           gap: 20px;
         }
         &--box {
-          background-color: #0b192c;
+          background-color: #f5efff;
           display: flex;
           flex-direction: column;
-          box-shadow: 0 0 10px #ff6500 inset;
+          box-shadow: 0 0 5px #0b192c;
           border-radius: 20px;
           &--image {
             display: flex;
@@ -96,9 +96,28 @@
               color: #ff6500;
             }
             p {
-              color: white;
+              color: #0b192c;
               line-height: 2;
               font-weight: 600;
+            }
+            a {
+              position: absolute;
+              @include small-screen {
+                top: 25px;
+                font-size: 20px;
+                font-weight: 500;
+              }
+              right: 15px;
+              bottom: 18px;
+              font-size: 17px;
+              color: #ff6500;
+              i {
+                color: #0b192c;
+              }
+              &:hover {
+                transform: scale(0.9);
+                transition: all 0.3s;
+              }
             }
           }
         }
@@ -163,7 +182,8 @@
         &__content {
           width: 98%;
           border-radius: 20px;
-          background-color: #0b192c;
+          background-color: #f5efff;
+          box-shadow: 0 0 5px #0b192c;
           margin: 0 auto;
           display: flex;
           @include ultra-large-screen {
@@ -197,7 +217,7 @@
             justify-content: center;
             gap: 40px 0px;
             h1 {
-              color: white;
+              color: #0b192c;
               font-size: 40px;
               @include small-screen {
                 font-size: 22px;
@@ -211,9 +231,10 @@
               li {
                 counter-increment: count;
                 position: relative;
-                color: white;
+                color: #0b192c;
                 font-weight: 400;
                 font-size: 15px;
+                font-weight: 700;
                 span {
                   font-weight: 700;
                   color: #ff6500;
@@ -246,6 +267,5 @@
 }
 
 ::-webkit-scrollbar {
-  // width: 0;
   height: 0;
 }
