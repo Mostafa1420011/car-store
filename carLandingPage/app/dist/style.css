@@ -175,11 +175,12 @@ main header nav .nav__links--hamburger .span {
   max-width: 1800px;
 }
 .main__hero {
-  background-image: url(../img/bg-car.webp);
+  background-image: url(../img/car-bg-5.jpeg);
   height: 100vh;
+  background-attachment: scroll;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0% 50%;
+  background-position: center 0%;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -227,13 +228,10 @@ main header nav .nav__links--hamburger .span {
   gap: 20px 0px;
 }
 .main__hero__content--title h3 {
-  color: white;
+  color: #0b192c;
   font-size: 80px;
   font-family: "Roboto", sans-serif;
   text-transform: capitalize;
-}
-.main__hero__content--title h3 span {
-  color: white;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .main__hero__content--title h3 {
@@ -254,12 +252,10 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__hero__content--title p {
-  font-size: 100px;
-  position: absolute;
-  z-index: -1;
-  top: 20px;
+  font-size: 50px;
   align-self: center;
-  opacity: 0.2;
+  color: orange;
+  opacity: 0.9;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .main__hero__content--title p {
@@ -280,15 +276,18 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__hero__content--btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   border-radius: 30px;
-  padding: 15px 25px;
+  width: 120px;
+  height: 50px;
   color: black;
   font-weight: 500;
   font-size: 18px;
   animation: heroBtn 2s infinite;
   width: 300px;
-  text-align: center;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .main__hero__content--btn {
@@ -300,18 +299,13 @@ main header nav .nav__links--hamburger .span {
   .main__hero__content--btn {
     margin: 0 auto;
     padding: 15px 90px;
+    width: auto;
+    text-align: start;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
   .main__hero__content--btn {
     margin: 0 auto;
-    padding: 15px 150px;
-  }
-}
-@media (max-width: 600px) {
-  .main__hero__content--btn {
-    width: auto;
-    text-align: start;
   }
 }
 .main__hero__content--btn:hover {
@@ -351,14 +345,25 @@ main header nav .nav__links--hamburger .span {
   flex-direction: column;
   align-self: center;
   height: 400px;
+  position: relative;
   background-color: #ff6500;
+  z-index: -1;
 }
 @media (max-width: 600px) {
   .main__services__title {
     background-attachment: scroll;
   }
 }
+.main__services__title::after {
+  backdrop-filter: blur(5px);
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  left: 0;
+}
 .main__services__title h1 {
+  z-index: 10;
   text-align: center;
   font-size: 100px;
   font-weight: 700;
@@ -383,6 +388,7 @@ main header nav .nav__links--hamburger .span {
   color: #0b192c;
 }
 .main__services__title p {
+  z-index: 10;
   color: #0b192c;
   font-weight: 900;
   border-radius: 10px;
@@ -664,13 +670,23 @@ main header nav .nav__links--hamburger .span {
   align-items: center;
   gap: 20px 0px;
   height: 400px;
+  position: relative;
 }
 @media (max-width: 600px) {
   .main__offers__title {
     background-attachment: scroll;
   }
 }
+.main__offers__title::after {
+  backdrop-filter: blur(5px);
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  left: 0;
+}
 .main__offers__title h1 {
+  z-index: 10;
   font-size: 120px;
   color: #ff6500;
 }
@@ -683,10 +699,15 @@ main header nav .nav__links--hamburger .span {
   color: #0b192c;
 }
 .main__offers__title p {
-  color: white;
-  font-size: 25px;
-  text-align: center;
+  z-index: 10;
+  color: #0b192c;
+  font-weight: 900;
+  border-radius: 10px;
+  font-size: 20px;
   font-weight: 600;
+  text-align: center;
+  padding: 10px;
+  margin-right: 10px;
 }
 @media (max-width: 600px) {
   .main__offers__title p {
@@ -1131,116 +1152,124 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__contact {
-  display: flex;
-  flex-direction: column;
-  gap: 70px 0px;
   margin-bottom: 70px;
-  min-height: 100vh;
-}
-.main__contact__hero {
-  height: 600px;
-  background-image: url(../img/customer-sercices2.webp);
+  background-image: url(../img/car-bg7.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  background-position: 0% 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-position: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__contact {
+    padding: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .main__contact {
+    padding: 0;
+    background-attachment: scroll;
+  }
+}
+.main__contact__hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 15px;
+  backdrop-filter: blur(11px);
+  border-radius: 20px;
 }
 @media (min-width: 601px) and (max-width: 768px) {
   .main__contact__hero {
-    background-attachment: local;
-    background-position: 100% 100%;
+    padding: 5px;
+    gap: 0px 20px;
   }
 }
 @media (max-width: 600px) {
   .main__contact__hero {
-    background-attachment: local;
-    background-position: 100% 100%;
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0;
+    backdrop-filter: blur(5px);
   }
 }
-.main__contact__hero::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.295);
-  z-index: 1;
-}
 .main__contact__hero--title {
-  position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
   flex-direction: column;
   gap: 100px 0px;
-  z-index: 10;
-  text-align: center;
 }
 .main__contact__hero--title--words {
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   gap: 20px 0px;
 }
+@media (max-width: 600px) {
+  .main__contact__hero--title--words {
+    gap: 150px 0px;
+    padding: 0px 10px;
+    height: 100%;
+    justify-content: center;
+  }
+}
 .main__contact__hero--title--words h1 {
-  font-size: 100px;
+  font-size: 40px;
   text-transform: capitalize;
-  color: #ff6500;
+  color: #ffffff;
 }
 @media (max-width: 600px) {
   .main__contact__hero--title--words h1 {
     font-size: 50px;
+    text-align: center;
   }
 }
-.main__contact__hero--title--words p {
+.main__contact__hero--title--words ul {
+  display: flex;
+  flex-direction: column;
+  gap: 50px 0px;
+}
+.main__contact__hero--title--words ul li h3 {
   font-size: 25px;
-  color: #0b192c;
-  font-weight: 700;
+  color: #ffffff;
+  font-weight: bold;
 }
-@media (max-width: 600px) {
-  .main__contact__hero--title--words p {
-    font-size: 16px;
-  }
+.main__contact__hero--title--words ul li p {
+  color: #ff6500;
+  margin: 10px 5px;
+  font-size: 18px;
+  font-weight: bold;
 }
-.main__contact__hero--title i {
-  animation: topbtm infinite 0.5s alternate;
-  font-size: 40px;
+.main__contact__hero--title--words ul li p i {
+  color: white;
+  margin-right: 7px;
 }
-.main__contact--content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.main__contact__hero--title--words ul li span {
+  font-size: 18px;
+  color: #ff6500;
 }
-@media (min-width: 601px) and (max-width: 768px) {
-  .main__contact--content {
-    grid-template-columns: none;
-    grid-template-rows: repeat(1, 1fr);
-  }
+.main__contact__hero--title--words ul li span a {
+  color: #ffffff;
 }
-@media (max-width: 600px) {
-  .main__contact--content {
-    grid-template-columns: none;
-    grid-template-rows: repeat(1, 1fr);
-  }
+.main__contact__hero--title--words ul li span a:hover {
+  color: black;
+  transition: color 0.3s;
 }
-.main__contact--content--images {
-  width: 100%;
+.main__contact__hero--title--words ul li .emails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0px;
 }
-@media (min-width: 601px) and (max-width: 768px) {
-  .main__contact--content--images {
-    display: none;
-  }
+.main__contact__hero--title--words ul li .emails a {
+  margin: 0px 5px;
+  color: #ff6500;
 }
-@media (max-width: 600px) {
-  .main__contact--content--images {
-    display: none;
-  }
+.main__contact__hero--title--words ul li .emails a:hover {
+  transform: scale(1.03);
+  color: black;
+  transition: transform 0.5s;
 }
-.main__contact--content--images img {
-  width: 100%;
-}
-.main__contact--content form {
+.main__contact__hero form {
   width: 90%;
   margin: 0 auto;
   border-radius: 20px;
@@ -1251,22 +1280,22 @@ main header nav .nav__links--hamburger .span {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  box-shadow: 0 0 10px #ff6500;
+  box-shadow: 0 0 10px #ffffff;
 }
 @media (min-width: 601px) and (max-width: 768px) {
-  .main__contact--content form {
+  .main__contact__hero form {
     width: 98%;
   }
 }
 @media (max-width: 600px) {
-  .main__contact--content form {
+  .main__contact__hero form {
     width: 95%;
   }
 }
-.main__contact--content form label {
+.main__contact__hero form label {
   display: block;
 }
-.main__contact--content form input {
+.main__contact__hero form input {
   margin-top: 20px;
   width: 100%;
   height: 50px;
@@ -1276,61 +1305,87 @@ main header nav .nav__links--hamburger .span {
   padding: 0px 20px;
   font-size: 20px;
 }
-.main__contact--content form input:focus {
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main__contact__hero form input {
+    height: 40px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__contact__hero form input {
+    height: 35px;
+  }
+}
+.main__contact__hero form input:focus {
   scale: 1.05;
   transition: all 0.5s;
 }
-.main__contact--content form .username {
+.main__contact__hero form .username {
   display: flex;
   align-items: center;
   gap: 0px 20px;
   width: 100%;
 }
 @media (max-width: 600px) {
-  .main__contact--content form .username {
+  .main__contact__hero form .username {
     flex-direction: column;
     gap: 20px 0px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  .main__contact--content form .username {
+  .main__contact__hero form .username {
     flex-direction: column;
     gap: 20px 0px;
   }
 }
-.main__contact--content form .username__fname {
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__contact__hero form .username {
+    flex-direction: column;
+    gap: 20px 0px;
+  }
+}
+.main__contact__hero form .username__fname {
   width: 50%;
 }
 @media (max-width: 600px) {
-  .main__contact--content form .username__fname {
+  .main__contact__hero form .username__fname {
     width: 100%;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  .main__contact--content form .username__fname {
+  .main__contact__hero form .username__fname {
     width: 100%;
   }
 }
-.main__contact--content form .username__fname input {
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__contact__hero form .username__fname {
+    width: 100%;
+  }
+}
+.main__contact__hero form .username__fname input {
   width: 100%;
 }
-.main__contact--content form .username__Lname {
+.main__contact__hero form .username__Lname {
   width: 50%;
 }
 @media (max-width: 600px) {
-  .main__contact--content form .username__Lname {
+  .main__contact__hero form .username__Lname {
     width: 100%;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  .main__contact--content form .username__Lname {
+  .main__contact__hero form .username__Lname {
     width: 100%;
   }
 }
-.main__contact--content form .username__Lname input {
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__contact__hero form .username__Lname {
+    width: 100%;
+  }
+}
+.main__contact__hero form .username__Lname input {
   width: 100%;
 }
-.main__contact--content form .message textarea {
+.main__contact__hero form .message textarea {
   width: 100%;
   height: 200px;
   padding: 20px;
@@ -1340,11 +1395,16 @@ main header nav .nav__links--hamburger .span {
   border-radius: 20px;
   margin-top: 20px;
 }
-.main__contact--content form .submit {
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__contact__hero form .message textarea {
+    height: 100px;
+  }
+}
+.main__contact__hero form .submit {
   background-color: #ff6500;
   color: white;
 }
-.main__contact--content form .submit:hover {
+.main__contact__hero form .submit:hover {
   background-color: white;
   color: #ff6500;
   transition: all 0.5s;

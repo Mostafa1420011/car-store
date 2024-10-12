@@ -2,16 +2,12 @@
   overflow-x: hidden;
   max-width: 1800px;
   &__hero {
-    // background-image: linear-gradient(
-    //   0deg,
-    //   rgba(245, 239, 255, 1) 0%,
-    //   rgba(255, 125, 41, 1) 100%
-    // );
-    background-image: url(../img/bg-car.webp);
+    background-image: url(../img/car-bg-5.jpeg);
     height: 100vh;
+    background-attachment: scroll;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0% 50%;
+    background-position: center 0%;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -50,13 +46,10 @@
         gap: 20px 0px;
 
         h3 {
-          color: white;
+          color: #0b192c;
           font-size: 80px;
           font-family: 'Roboto', sans-serif;
           text-transform: capitalize;
-          span {
-            color: white;
-          }
           @include large-screen {
             font-size: 40px;
             text-align: center;
@@ -71,12 +64,10 @@
           }
         }
         p {
-          font-size: 100px;
-          position: absolute;
-          z-index: -1;
-          top: 20px;
+          font-size: 50px;
           align-self: center;
-          opacity: 0.2;
+          color: orange;
+          opacity: 0.9;
           @include large-screen {
             font-size: 40px;
             text-align: center;
@@ -100,25 +91,24 @@
         @include small-screen {
           margin: 0 auto;
           padding: 15px 90px;
-        }
-        @include medium-screen {
-          margin: 0 auto;
-          padding: 15px 150px;
-        }
-        background-color: white;
-        border-radius: 30px;
-        padding: 15px 25px;
-        color: black;
-        font-weight: 500;
-        font-size: 18px;
-        // align-self: flex-start;
-        animation: heroBtn 2s infinite;
-        width: 300px;
-        text-align: center;
-        @include small-screen {
           width: auto;
           text-align: start;
         }
+        @include medium-screen {
+          margin: 0 auto;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 30px;
+        width: 120px;
+        height: 50px;
+        color: black;
+        font-weight: 500;
+        font-size: 18px;
+        animation: heroBtn 2s infinite;
+        width: 300px;
         &:hover {
           animation-play-state: paused;
           outline: #0b192c 2px solid;
