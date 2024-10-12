@@ -56,6 +56,9 @@
       gap: 120px 0px;
       &__primary {
         width: 90%;
+        @include small-screen {
+          width: 98%;
+        }
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         margin: 0 auto;
@@ -74,6 +77,7 @@
           flex-direction: column;
           box-shadow: 0 0 5px #0b192c;
           border-radius: 20px;
+
           &--image {
             display: flex;
             justify-content: center;

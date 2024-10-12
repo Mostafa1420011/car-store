@@ -409,6 +409,11 @@ main header nav .nav__links--hamburger .span {
   margin: 0 auto;
   gap: 0px 10px;
 }
+@media (max-width: 600px) {
+  .main__services__options__primary {
+    width: 98%;
+  }
+}
 @media (min-width: 769px) and (max-width: 1024px) {
   .main__services__options__primary {
     grid-template-columns: repeat(2, 1fr);
