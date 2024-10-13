@@ -43,12 +43,21 @@ hamburger.addEventListener('click', changeHamburger);
 
 const LatestOfferBtn = document.querySelector('.Latest');
 const SpecialDiscountsBtn = document.querySelector('.Special');
+const favorite = document.querySelector('.favorite');
 const allBtn = document.querySelector('.All');
 const box = document.querySelectorAll('.box');
+const star = document.querySelectorAll('.star');
+const boxes = document.querySelector('.boxs');
+
+star.forEach((ele) => {
+  ele.addEventListener('click', () => {
+    ele.classList.toggle('starColor');
+  });
+});
 
 const select = (value) => {
   box.forEach((ele) => {
-    ele.classList.contains(value)
+    ele.classList.contains(value) || ele.querySelector('.starColor')
       ? (ele.style.display = 'grid')
       : (ele.style.display = 'none');
   });
@@ -56,6 +65,7 @@ const select = (value) => {
 allBtn.addEventListener('click', () => select('box'));
 LatestOfferBtn.addEventListener('click', () => select('boxLatest'));
 SpecialDiscountsBtn.addEventListener('click', () => select('boxSpecial'));
+favorite.addEventListener('click', () => select('favorite'));
 
 let sec = 60;
 let min = 60;
