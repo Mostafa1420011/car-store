@@ -14,9 +14,7 @@ a {
 
 section {
   min-height: 100px;
-}
-section:not(.no-margin) {
-  margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 main {
@@ -456,7 +454,6 @@ main header nav .nav__links--hamburger .span {
   gap: 20px 0px;
   min-height: 200px;
   border-radius: 20px;
-  margin-bottom: 50px;
 }
 .main__services__options__another--title {
   display: flex;
@@ -663,7 +660,7 @@ main header nav .nav__links--hamburger .span {
 }
 .main__offers__title p {
   z-index: 10;
-  color: #0b192c;
+  color: #ffffff;
   font-weight: 900;
   border-radius: 10px;
   font-size: 20px;
@@ -807,11 +804,10 @@ main header nav .nav__links--hamburger .span {
 @media (max-width: 600px) {
   .main__offers__container--boxs--box {
     scroll-snap-align: center;
-    flex-basis: 100%;
+    flex-basis: 90%;
     flex-shrink: 0;
     grid-template-rows: none;
     height: 100%;
-    padding-left: 10xp;
   }
 }
 .main__offers__container--boxs--box--images {
@@ -1135,18 +1131,19 @@ main header nav .nav__links--hamburger .span {
 }
 
 .main__contact {
-  margin-bottom: 70px;
-  background-image: url(../img/car-bg7.jpeg);
+  background-image: url(../img/car-finalbg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
   margin: 0 auto;
   padding: 30px;
+  margin-bottom: 70px;
 }
 @media (min-width: 601px) and (max-width: 768px) {
   .main__contact {
-    padding: 20px;
+    padding: 10px;
+    background-attachment: scroll;
   }
 }
 @media (max-width: 600px) {
@@ -1156,114 +1153,45 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__contact__hero {
+  box-shadow: 0 0 10px black;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
   padding: 15px;
   backdrop-filter: blur(11px);
   border-radius: 20px;
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  .main__contact__hero {
-    padding: 5px;
-    gap: 0px 20px;
-  }
+  gap: 40px 0px;
 }
 @media (max-width: 600px) {
   .main__contact__hero {
-    grid-template-columns: none;
-    grid-template-rows: repeat(2, 1fr);
-    padding: 0;
-    backdrop-filter: blur(5px);
+    border-radius: 0px;
   }
 }
 .main__contact__hero--title {
   display: flex;
-  justify-content: start;
-  flex-direction: column;
-  gap: 100px 0px;
+  justify-content: center;
+  align-items: center;
 }
-.main__contact__hero--title--words {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  gap: 20px 0px;
-}
-@media (max-width: 600px) {
-  .main__contact__hero--title--words {
-    gap: 150px 0px;
-    padding: 0px 10px;
-    height: 100%;
-    justify-content: center;
-  }
-}
-.main__contact__hero--title--words h1 {
-  font-size: 40px;
+.main__contact__hero--title h1 {
+  font-size: 80px;
   text-transform: capitalize;
-  color: #ffffff;
 }
 @media (max-width: 600px) {
-  .main__contact__hero--title--words h1 {
-    font-size: 50px;
-    text-align: center;
+  .main__contact__hero--title h1 {
+    font-size: 40px;
   }
-}
-.main__contact__hero--title--words ul {
-  display: flex;
-  flex-direction: column;
-  gap: 50px 0px;
-}
-.main__contact__hero--title--words ul li h3 {
-  font-size: 25px;
-  color: #ffffff;
-  font-weight: bold;
-}
-.main__contact__hero--title--words ul li p {
-  color: #ff6500;
-  margin: 10px 5px;
-  font-size: 18px;
-  font-weight: bold;
-}
-.main__contact__hero--title--words ul li p i {
-  color: white;
-  margin-right: 7px;
-}
-.main__contact__hero--title--words ul li span {
-  font-size: 18px;
-  color: #ff6500;
-}
-.main__contact__hero--title--words ul li span a {
-  color: #ffffff;
-}
-.main__contact__hero--title--words ul li span a:hover {
-  color: black;
-  transition: color 0.3s;
-}
-.main__contact__hero--title--words ul li .emails {
-  display: flex;
-  flex-direction: column;
-  gap: 10px 0px;
-}
-.main__contact__hero--title--words ul li .emails a {
-  margin: 0px 5px;
-  color: #ff6500;
-}
-.main__contact__hero--title--words ul li .emails a:hover {
-  transform: scale(1.03);
-  color: #ffffff;
-  transition: transform 0.5s;
 }
 .main__contact__hero form {
+  box-shadow: 0 0 20px #0b192c inset;
   width: 90%;
   margin: 0 auto;
   border-radius: 20px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px 0px;
+  gap: 30px 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  box-shadow: 0 0 10px #ffffff;
 }
 @media (min-width: 601px) and (max-width: 768px) {
   .main__contact__hero form {
@@ -1283,7 +1211,6 @@ main header nav .nav__links--hamburger .span {
   width: 100%;
   height: 50px;
   border-radius: 10px;
-  border: 1px solid #ff6500;
   outline: none;
   padding: 0px 20px;
   font-size: 20px;
@@ -1299,10 +1226,27 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__contact__hero form input:focus {
-  scale: 1.05;
-  transition: all 0.5s;
+  border: 1px solid #0b192c;
+  transition: all 0.2s;
+}
+.main__contact__hero form i {
+  display: none;
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main__contact__hero form i {
+    bottom: 11px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__contact__hero form i {
+    bottom: 10px;
+  }
 }
 .main__contact__hero form .username {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0px 20px;
@@ -1326,7 +1270,22 @@ main header nav .nav__links--hamburger .span {
     gap: 20px 0px;
   }
 }
+.main__contact__hero form .username .note {
+  position: absolute;
+  color: red;
+  margin: 10px;
+  font-size: 15px;
+  display: none;
+  left: 0;
+  bottom: -35px;
+}
+@media (max-width: 600px) {
+  .main__contact__hero form .username .note {
+    font-size: 11px;
+  }
+}
 .main__contact__hero form .username__fname {
+  position: relative;
   width: 50%;
 }
 @media (max-width: 600px) {
@@ -1348,6 +1307,7 @@ main header nav .nav__links--hamburger .span {
   width: 100%;
 }
 .main__contact__hero form .username__Lname {
+  position: relative;
   width: 50%;
 }
 @media (max-width: 600px) {
@@ -1368,20 +1328,23 @@ main header nav .nav__links--hamburger .span {
 .main__contact__hero form .username__Lname input {
   width: 100%;
 }
+.main__contact__hero form .email {
+  position: relative;
+}
+.main__contact__hero form .phone {
+  position: relative;
+}
 .main__contact__hero form .message textarea {
   width: 100%;
   height: 200px;
   padding: 20px;
-  border: #ff6500 1px solid;
   font-size: 20px;
   outline: none;
   border-radius: 20px;
   margin-top: 20px;
 }
-@media (min-width: 601px) and (max-width: 768px) {
-  .main__contact__hero form .message textarea {
-    height: 100px;
-  }
+.main__contact__hero form .message textarea:focus {
+  border: solid 1px #0b192c;
 }
 .main__contact__hero form .submit {
   background-color: #ff6500;
@@ -1393,9 +1356,164 @@ main header nav .nav__links--hamburger .span {
   transition: all 0.5s;
   cursor: pointer;
 }
+.main__contact__hero--details ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 600px) {
+  .main__contact__hero--details ul {
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+.main__contact__hero--details ul li h3 {
+  font-size: 25px;
+  color: #0b192c;
+  font-weight: bold;
+  text-align: center;
+}
+.main__contact__hero--details ul li p {
+  text-align: center;
+  color: #0b192c;
+  margin: 10px 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .main__contact__hero--details ul li p {
+    font-size: 14px;
+  }
+}
+.main__contact__hero--details ul li p i {
+  color: white;
+  margin-right: 7px;
+}
+.main__contact__hero--details ul li .accounts {
+  display: flex;
+  justify-content: center;
+  gap: 0px 20px;
+}
+.main__contact__hero--details ul li .accounts a {
+  margin: 10px 0px;
+}
+.main__contact__hero--details ul li .accounts a i {
+  color: #0b192c;
+  font-size: 25px;
+}
+.main__contact__hero--details ul li .accounts a i:hover {
+  color: #ffffff;
+  transition: color 0.3s;
+}
+.main__contact__hero--details ul li .accounts a:hover {
+  transform: scale(1.1) translateY(-5px);
+  transition: transform 0.5s;
+}
 
 @keyframes topbtm {
   to {
     transform: translateY(100%);
   }
+}
+.error {
+  border: solid 1px red;
+}
+
+.main__faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px 0px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+.main__faq--title h1 {
+  text-transform: capitalize;
+  color: #0b192c;
+  font-size: 100px;
+}
+.main__faq--title h1 span {
+  color: #ff6500;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .main__faq--title h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .main__faq--title h1 {
+    font-size: 30px;
+  }
+}
+.main__faq ul {
+  padding: 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px black;
+  gap: 20px 0px;
+  border-radius: 20px;
+}
+.main__faq ul li {
+  border-bottom: 1px solid #0b192c;
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.main__faq ul li:last-child {
+  border-bottom: none;
+}
+.main__faq ul li h4 {
+  cursor: pointer;
+  display: block;
+  margin-bottom: 7px;
+  font-size: 20px;
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__faq ul li h4 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .main__faq ul li h4 {
+    font-size: 13px;
+  }
+}
+.main__faq ul li p {
+  position: absolute;
+  top: 0;
+  display: none;
+  padding: 10px 0px;
+  font-size: 18px;
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__faq ul li p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .main__faq ul li p {
+    font-size: 12px;
+  }
+}
+.main__faq ul li .question {
+  position: relative;
+}
+.main__faq ul li .question i {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+@media (max-width: 600px) {
+  .main__faq ul li .question i {
+    display: none;
+  }
+}
+.main .close {
+  display: flex;
+  position: relative;
+}
+.main .arrow-bottom {
+  transform: rotate(90deg);
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

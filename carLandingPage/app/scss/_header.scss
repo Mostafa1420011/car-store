@@ -13,9 +13,7 @@ a {
 }
 section {
   min-height: 100px;
-  &:not(.no-margin) {
-    margin-top: 100px;
-  }
+  margin-bottom: 50px;
 }
 
 main {

@@ -1,18 +1,3 @@
-// const img = document.querySelector('.img-change');
-// const images = ['./img/car1.png', './img/car2.png', './img/car3.png'];
-// let count = 0;
-
-// const func = () => {
-//   setInterval(() => {
-//     img.setAttribute('src', images[count]);
-//     count++;
-//     if (count === 3) {
-//       count = 0;
-//     }
-//   }, 2000);
-// };
-
-// func();
 const span = document.querySelectorAll('[data-name]');
 const hamburger = document.querySelector('.hamburger');
 const ul = document.querySelector('.ul');
@@ -138,4 +123,25 @@ const discount = () => {
     afterDis[index].innerText = `${(price * 40) / 100},000`;
   });
 };
-discount();
+
+const boxDiscount = document.querySelectorAll('.boxLatest-discound del');
+const boxLatestPrice = document.querySelectorAll('.boxLatest-price');
+
+boxDiscount.forEach((ele, index) => {
+  let convert = parseFloat(ele.innerText);
+  let result = (convert * 40) / 100;
+  boxLatestPrice[index].innerText = `${result},000`;
+  console.log(convert);
+});
+
+//************* faq*****************//
+
+const questions = document.querySelectorAll('.questions');
+const answer = document.querySelectorAll('.answer');
+const arrowRight = document.querySelectorAll('.arrow-right');
+questions.forEach((ele, index) => {
+  ele.addEventListener('click', () => {
+    answer[index].classList.toggle('close');
+    arrowRight[index].classList.toggle('arrow-bottom');
+  });
+});

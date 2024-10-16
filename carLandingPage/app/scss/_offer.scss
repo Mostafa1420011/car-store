@@ -36,7 +36,7 @@
       }
       p {
         z-index: 10;
-        color: #0b192c;
+        color: #ffffff;
         font-weight: 900;
         border-radius: 10px;
         font-size: 20px;
@@ -163,11 +163,10 @@
         &--box {
           @include small-screen {
             scroll-snap-align: center;
-            flex-basis: 100%;
+            flex-basis: 90%;
             flex-shrink: 0;
             grid-template-rows: none;
             height: 100%;
-            padding-left: 10xp;
           }
           background-color: #f5efff;
           box-shadow: 0 0 5px #0b192c;

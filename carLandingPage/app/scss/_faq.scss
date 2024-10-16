@@ -1,0 +1,89 @@
+.main {
+  &__faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    &--title {
+      h1 {
+        text-transform: capitalize;
+        color: #0b192c;
+        font-size: 100px;
+        span {
+          color: #ff6500;
+        }
+        @include large-screen-down {
+          font-size: 50px;
+        }
+        @include small-screen {
+          font-size: 30px;
+        }
+      }
+    }
+    ul {
+      padding: 20px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 10px black;
+      gap: 20px 0px;
+      border-radius: 20px;
+
+      li {
+        &:last-child {
+          border-bottom: none;
+        }
+        border-bottom: 1px solid #0b192c;
+        padding: 5px;
+        position: relative;
+        overflow: hidden;
+        h4 {
+          cursor: pointer;
+          display: block;
+          margin-bottom: 7px;
+          font-size: 20px;
+          @include medium-screen {
+            font-size: 15px;
+          }
+          @include small-screen {
+            font-size: 13px;
+          }
+        }
+        p {
+          position: absolute;
+          top: 0;
+          display: none;
+          padding: 10px 0px;
+          font-size: 18px;
+          @include medium-screen {
+            font-size: 14px;
+          }
+          @include small-screen {
+            font-size: 12px;
+          }
+        }
+        .question {
+          position: relative;
+          i {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            @include small-screen {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .close {
+    display: flex;
+    position: relative;
+  }
+  .arrow-bottom {
+    transform: rotate(90deg);
+    display: flex;
+  }
+}
