@@ -1454,6 +1454,11 @@ main header nav .nav__links--hamburger .span {
   gap: 20px 0px;
   border-radius: 20px;
 }
+@media (max-width: 600px) {
+  .main__faq ul {
+    width: 98%;
+  }
+}
 .main__faq ul li {
   border-bottom: 1px solid #0b192c;
   padding: 5px;

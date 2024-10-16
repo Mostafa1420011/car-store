@@ -30,7 +30,9 @@
       box-shadow: 0 0 10px black;
       gap: 20px 0px;
       border-radius: 20px;
-
+      @include small-screen {
+        width: 98%;
+      }
       li {
         &:last-child {
           border-bottom: none;
