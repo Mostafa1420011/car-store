@@ -19,6 +19,37 @@ section {
 
 main {
   margin: 0 auto;
+  position: relative;
+}
+main .arrow-up {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #0b192c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+@media (max-width: 768px) {
+  main .arrow-up {
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+main .arrow-up i {
+  color: #0b192c;
+  font-size: 18px;
+}
+main .arrow-up:hover {
+  scale: 1.2;
+  transition: scale 0.2s;
 }
 main header {
   position: absolute;
@@ -84,7 +115,7 @@ main header nav .nav__links ul li:hover::before {
   position: absolute;
   width: 0px;
   height: 2px;
-  background-color: black;
+  background-color: #ff6500;
   bottom: -5px;
   animation: border 0.5s 1 forwards;
 }
@@ -94,7 +125,7 @@ main header nav .nav__links ul li:hover::before {
   }
 }
 main header nav .nav__links ul li a {
-  color: #0b192c;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 2px;
@@ -173,112 +204,219 @@ main header nav .nav__links--hamburger .span {
   max-width: 1800px;
 }
 .main__hero {
-  background-image: url(../img/car-bg-5.jpeg);
-  height: 100vh;
-  background-attachment: scroll;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 20px;
+  position: relative;
+  background-color: #0b192c;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  gap: 0px 0px;
+}
+.main__hero span {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  clip-path: polygon(0 0, 70% 0, 43% 100%, 0% 100%);
+  background-color: #ff6500;
+  z-index: 0;
+}
+@media (max-width: 600px) {
+  .main__hero span {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+  }
 }
 .main__hero__content {
-  z-index: 10;
-  width: 100%;
-  height: 100vh;
+  padding: 0px 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  gap: 350px 0px;
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .main__hero__content {
-    width: 100%;
-    gap: 400px 0px;
-  }
+  gap: 0px 20px;
+  margin-top: 20px;
 }
 @media (max-width: 768px) {
   .main__hero__content {
-    width: 100%;
-    gap: 350px 0px;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main__hero__content {
+    margin-top: 70px;
   }
 }
 .main__hero__content--title {
+  width: 50%;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  gap: 20px 0px;
+  align-items: center;
+  justify-content: center;
+  gap: 40px 0px;
 }
-.main__hero__content--title h3 {
-  color: #0b192c;
-  font-size: 80px;
-  font-family: "Roboto", sans-serif;
-  text-transform: capitalize;
+@media (max-width: 768px) {
+  .main__hero__content--title {
+    width: 100%;
+    padding: 20px 0px;
+    gap: 10px 0px;
+  }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  .main__hero__content--title h3 {
-    font-size: 60px;
-    text-align: center;
+  .main__hero__content--title {
+    gap: 20px 0px;
+  }
+}
+.main__hero__content--title h1 {
+  color: #ffffff;
+  line-height: 1.1;
+  font-size: 80px;
+  font-weight: bold;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main__hero__content--title h1 {
+    font-size: 59px;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
-  .main__hero__content--title h3 {
-    text-align: center;
+  .main__hero__content--title h1 {
     font-size: 45px;
   }
 }
 @media (max-width: 600px) {
-  .main__hero__content--title h3 {
-    text-align: center;
-    font-size: 30px;
+  .main__hero__content--title h1 {
+    font-size: 25px;
   }
 }
 .main__hero__content--title p {
-  font-size: 50px;
-  align-self: center;
-  color: orange;
-  opacity: 0.9;
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .main__hero__content--title p {
-    font-size: 40px;
-    text-align: center;
-  }
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  .main__hero__content--title p {
-    text-align: center;
-    font-size: 40px;
-  }
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 1.6;
 }
 @media (max-width: 600px) {
   .main__hero__content--title p {
-    text-align: center;
-    font-size: 28px;
+    font-size: 14px;
+    padding: 10px;
   }
 }
-.main__hero__content--btn {
-  margin: 0 auto;
+.main__hero__content--car {
+  width: 50%;
+  z-index: 2;
   display: flex;
+}
+@media (max-width: 768px) {
+  .main__hero__content--car {
+    width: 100%;
+  }
+}
+.main__hero__content--car img {
+  width: 100%;
+  transform: rotateY(-180deg) scale(1.2);
+}
+@media (max-width: 768px) {
+  .main__hero__content--car img {
+    transform: rotateY(-180deg) scale(1.2) translateX(-25px);
+  }
+}
+.main__hero--btn {
+  padding: 0px 20px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main__hero--btn {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__hero--btn {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 600px) {
+  .main__hero--btn {
+    flex-direction: column-reverse;
+    gap: 20px 0px;
+  }
+}
+.main__hero--btn a {
+  display: inherit;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  border-radius: 30px;
-  width: 120px;
+  color: white;
+  background-color: #0b192c;
+  width: 250px;
   height: 50px;
-  color: black;
-  font-weight: 500;
-  font-size: 18px;
-  animation: heroBtn 2s infinite;
-  width: 300px;
+  border-radius: 20px;
 }
-.main__hero__content--btn:hover {
-  animation-play-state: paused;
+@media (max-width: 600px) {
+  .main__hero--btn a {
+    border: 3px solid #ffffff;
+  }
+}
+.main__hero--btn a:hover {
+  background-color: #ffffff;
+  color: #0b192c;
+  font-weight: bold;
   outline: #0b192c 2px solid;
+  transition: background-color 0.5s;
+}
+.main__hero--btn ul {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  background-color: #ff6500;
+  padding: 20px;
+  display: flex;
+  gap: 0px 50px;
+}
+.main__hero--btn ul::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 50%;
+  left: -90px;
+  top: 20px;
+  background-color: #ffffff;
+  transform: rotate(40deg);
+  z-index: 0;
+  animation: rotate 3s 2 linear forwards;
+}
+.main__hero--btn ul::after {
+  content: "";
+  position: absolute;
+  width: 98%;
+  height: 90%;
+  left: 4px;
+  top: 3px;
+  border-radius: 10px;
+  background-color: #ff6500;
+  z-index: 1;
+}
+@media (max-width: 600px) {
+  .main__hero--btn ul {
+    border: 3px solid #ffffff;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main__hero--btn ul {
+    gap: 0px 40px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__hero--btn ul {
+    gap: 0px 12px;
+  }
+}
+.main__hero--btn ul li {
+  z-index: 10;
+  color: #ffffff;
+  text-align: center;
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .main__hero--btn ul li {
+    font-size: 14px;
+  }
 }
 
 @keyframes heroBtn {
@@ -290,6 +428,11 @@ main header nav .nav__links--hamburger .span {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
   }
 }
 .main__services {
