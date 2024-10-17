@@ -26,21 +26,20 @@ main {
       width: 40px;
       height: 40px;
     }
-
     position: fixed;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     bottom: 20px;
     right: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px #0b192c;
+    background-color: $white;
+    box-shadow: 0 0 10px $secondary-dark;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
     i {
-      color: #0b192c;
+      color: $secondary-dark;
       font-size: 18px;
     }
     &:hover {
@@ -63,7 +62,7 @@ main {
       .nav__icon {
         p {
           font-size: 30px;
-          color: white;
+          color: $secondary-dark;
         }
       }
       .nav__links {
@@ -87,8 +86,8 @@ main {
             right: 0;
             border-radius: 7px;
             z-index: 100;
-            background-color: white;
-            box-shadow: 0 5px 10px #0b192c;
+            background-color: $white;
+            box-shadow: 0 5px 10px $secondary-dark;
           }
 
           li {

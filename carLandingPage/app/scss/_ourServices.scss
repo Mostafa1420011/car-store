@@ -16,7 +16,7 @@
       align-self: center;
       height: 400px;
       position: relative;
-      background-color: #ff6500;
+      background-color: $secondary;
       z-index: -1;
       &::after {
         backdrop-filter: blur(5px);
@@ -41,9 +41,9 @@
         text-align: center;
         font-size: 100px;
         font-weight: 700;
-        color: #ff6500;
+        color: $secondary;
         span {
-          color: #0b192c;
+          color: $secondary-dark;
         }
       }
       p {
@@ -51,7 +51,7 @@
         @include small-screen {
           font-size: 16px;
         }
-        color: #0b192c;
+        color: $secondary-dark;
         font-weight: 900;
         border-radius: 10px;
         font-size: 20px;
@@ -84,10 +84,10 @@
           gap: 20px;
         }
         &--box {
-          background-color: #f5efff;
+          background-color: $primary-light;
           display: flex;
           flex-direction: column;
-          box-shadow: 0 0 5px #0b192c;
+          box-shadow: 0 0 5px $secondary-dark;
           border-radius: 20px;
           &--image {
             display: flex;
@@ -108,10 +108,10 @@
             padding: 15px;
             h4 {
               font-size: 35px;
-              color: #ff6500;
+              color: $secondary-dark;
             }
             p {
-              color: #0b192c;
+              color: $secondary-dark;
               line-height: 2;
               font-weight: 600;
             }
@@ -125,9 +125,9 @@
               right: 15px;
               bottom: 18px;
               font-size: 17px;
-              color: #ff6500;
+              color: $secondary;
               i {
-                color: #0b192c;
+                color: $secondary-dark;
               }
               &:hover {
                 transform: scale(0.9);
@@ -161,7 +161,7 @@
               font-size: 30px;
             }
             span {
-              color: #ff6500;
+              color: $secondary;
             }
           }
           p {
@@ -196,8 +196,8 @@
         &__content {
           width: 98%;
           border-radius: 20px;
-          background-color: #f5efff;
-          box-shadow: 0 0 5px #0b192c;
+          background-color: $primary-light;
+          box-shadow: 0 0 5px $secondary-dark;
           margin: 0 auto;
           display: flex;
           @include ultra-large-screen {
@@ -231,7 +231,7 @@
             justify-content: center;
             gap: 40px 0px;
             h1 {
-              color: #0b192c;
+              color: $secondary-dark;
               font-size: 40px;
               @include small-screen {
                 font-size: 22px;
@@ -245,13 +245,13 @@
               li {
                 counter-increment: count;
                 position: relative;
-                color: #0b192c;
+                color: $secondary-dark;
                 font-weight: 400;
                 font-size: 15px;
                 font-weight: 700;
                 span {
                   font-weight: 700;
-                  color: #ff6500;
+                  color: $secondary;
                   font-size: 18px;
                 }
                 &::after {
@@ -261,7 +261,7 @@
                   height: 20px;
                   text-align: center;
                   border-radius: 10px;
-                  background-color: #ff6500;
+                  background-color: $secondary;
                   color: white;
                   left: -40px;
                   top: 3px;

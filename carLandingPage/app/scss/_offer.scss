@@ -26,17 +26,17 @@
       h1 {
         z-index: 10;
         font-size: 120px;
-        color: #ff6500;
+        color: $secondary;
         @include small-screen {
           font-size: 50px;
         }
         span {
-          color: #0b192c;
+          color: $secondary-dark;
         }
       }
       p {
         z-index: 10;
-        color: #ffffff;
+        color: $white;
         font-weight: 900;
         border-radius: 10px;
         font-size: 20px;
@@ -96,16 +96,16 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: white;
+          background-color: $white;
           top: 0px;
           z-index: 10;
           right: 0px;
           font-size: 12px;
           text-align: center;
-          color: #f5efff;
+          color: $white;
           font-weight: 600;
           border-radius: 0px 10px 0px 10px;
-          background-color: #0b192c;
+          background-color: $secondary-dark;
         }
       }
 
@@ -122,10 +122,10 @@
           top: 0;
           z-index: 10;
           right: 0;
-          background-color: #0b192c;
+          background-color: $secondary-dark;
           font-size: 12px;
           text-align: center;
-          color: #f5efff;
+          color: $white;
           font-weight: 600;
           border-radius: 0px 10px 0px 10px;
         }
@@ -157,7 +157,7 @@
           gap: 20px;
           overflow: scroll;
           padding: 10px;
-          box-shadow: 0 0 10px inset black;
+          box-shadow: 0 0 10px inset $secondary-dark;
         }
 
         &--box {
@@ -168,8 +168,8 @@
             grid-template-rows: none;
             height: 100%;
           }
-          background-color: #f5efff;
-          box-shadow: 0 0 5px #0b192c;
+          background-color: $primary-light;
+          box-shadow: 0 0 5px $secondary-dark;
           padding: 15px;
           border-radius: 15px;
           display: grid;
@@ -190,11 +190,11 @@
             flex-direction: column;
             align-items: start;
             h1 {
-              color: #0b192c;
+              color: $secondary-dark;
               font-size: 30px;
             }
             p {
-              color: #ff6500;
+              color: $secondary;
             }
           }
           &--details {
@@ -205,6 +205,7 @@
               i {
                 font-size: 20px;
                 cursor: pointer;
+                color: $white;
               }
             }
             display: flex;
@@ -212,20 +213,20 @@
             gap: 10px 0px;
             h4 {
               font-size: 40px;
-              color: #0b192c;
+              color: $secondary-dark;
             }
             a {
               padding: 10px;
               border-radius: 10px;
-              color: white;
+              color: $white;
               font-weight: 700;
               text-align: center;
-              background-color: #0b192c;
+              background-color: $secondary-dark;
               &:hover {
                 background-color: transparent;
-                color: #0b192c;
+                color: $secondary-dark;
                 font-weight: 700;
-                outline: 2px solid #0b192c;
+                outline: 2px solid $secondary-dark;
                 transition: background-color 0.5s, color 0.5s, outline 0.1s;
               }
             }
@@ -256,16 +257,16 @@
           }
           font-size: 100px;
           text-transform: capitalize;
-          color: #ff6500;
+          color: $secondary;
           span {
-            color: #0b192c;
+            color: $secondary-dark;
             display: inline-block;
           }
         }
         p {
           font-size: 20px;
           font-weight: 600;
-          color: #0b192c;
+          color: $secondary-dark;
           @include large-screen {
             font-size: 16px;
           }
@@ -285,11 +286,11 @@
           position: absolute;
           top: 0px;
           right: 0px;
-          background-color: #ff6500;
+          background-color: $white;
           border-radius: 0px 0px 0px 25px;
           width: 40%;
           height: 20px;
-          color: white;
+          color: $secondary-dark;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -320,17 +321,17 @@
           flex-basis: 100%;
           flex-shrink: 0;
           scroll-snap-align: start;
-          border: 1px solid #0b192c;
+          border: 1px solid $secondary-dark;
           &--info {
             display: flex;
             flex-direction: column;
             padding: 20px;
             width: 100%;
             gap: 40px 0px;
-            background-color: #0b192c;
+            background-color: $primary-light;
             h1 {
               font-size: 45px;
-              color: white;
+              color: $secondary-dark;
               @include large-screen {
                 font-size: 30px;
               }
@@ -347,7 +348,7 @@
               gap: 20px 0px;
               li {
                 span {
-                  color: #ff6500;
+                  color: $secondary;
                   font-weight: 700;
                   font-size: 20px;
                   @include large-screen {
@@ -369,7 +370,7 @@
                 @include small-screen {
                   font-size: 14px;
                 }
-                color: white;
+                color: $secondary-dark;
                 position: relative;
                 padding-left: 40px;
                 font-size: 18px;
@@ -390,7 +391,7 @@
                   text-align: center;
                   transform: rotateY(177deg) rotate(-27deg);
                   left: 5px;
-                  color: #ff6500;
+                  color: $secondary;
                 }
               }
             }
@@ -403,18 +404,18 @@
                 align-self: center;
                 padding: 10px 180px;
               }
-              background-color: white;
+              background-color: $white;
               align-self: flex-end;
               padding: 10px 180px;
               border-radius: 20px;
-              color: #ff6500;
+              color: $secondary-dark;
               font-size: 25px;
               font-weight: 500;
               text-transform: capitalize;
               &:hover {
-                outline: #ff6500 2px solid;
+                outline: $white 2px solid;
                 background-color: transparent;
-                color: white;
+                color: $secondary-dark;
                 transition: all 0.3s;
               }
             }
@@ -422,6 +423,9 @@
         }
       }
     }
+  }
+  .starColor {
+    color: $secondary;
   }
 }
 
@@ -445,8 +449,4 @@
   100% {
     transform: rotate(5deg);
   }
-}
-
-.starColor {
-  color: #ff6500;
 }

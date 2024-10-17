@@ -67,7 +67,7 @@ main header nav {
 }
 main header nav .nav__icon p {
   font-size: 30px;
-  color: white;
+  color: #0b192c;
 }
 main header nav .nav__links {
   display: flex;
@@ -95,7 +95,7 @@ main header nav .nav__links ul {
     right: 0;
     border-radius: 7px;
     z-index: 100;
-    background-color: white;
+    background-color: #ffffff;
     box-shadow: 0 5px 10px #0b192c;
   }
 }
@@ -212,16 +212,17 @@ main header nav .nav__links--hamburger .span {
   min-height: 100vh;
   gap: 0px 0px;
 }
-.main__hero span {
+.main__hero::before {
+  content: "";
   position: absolute;
   width: 100vw;
   min-height: 100%;
+  background-color: #ccd5ae;
   clip-path: polygon(0 0, 70% 0, 43% 100%, 0% 100%);
-  background-color: #ff6500;
   z-index: 0;
 }
 @media (max-width: 600px) {
-  .main__hero span {
+  .main__hero::before {
     clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
   }
 }
@@ -266,7 +267,7 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__hero__content--title h1 {
-  color: #ffffff;
+  color: #0b192c;
   line-height: 1.1;
   font-size: 80px;
   font-weight: bold;
@@ -287,7 +288,7 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__hero__content--title p {
-  color: #ffffff;
+  color: #0b192c;
   font-weight: bold;
   line-height: 1.6;
 }
@@ -343,7 +344,7 @@ main header nav .nav__links--hamburger .span {
   display: inherit;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #ffffff;
   background-color: #0b192c;
   width: 250px;
   height: 50px;
@@ -365,7 +366,7 @@ main header nav .nav__links--hamburger .span {
   overflow: hidden;
   position: relative;
   border-radius: 10px;
-  background-color: #ff6500;
+  background-color: #ccd5ae;
   padding: 20px;
   display: flex;
   gap: 0px 50px;
@@ -377,7 +378,7 @@ main header nav .nav__links--hamburger .span {
   height: 50%;
   left: -90px;
   top: 20px;
-  background-color: #ffffff;
+  background-color: #0b192c;
   transform: rotate(40deg);
   z-index: 0;
   animation: rotate 3s 2 linear forwards;
@@ -390,7 +391,7 @@ main header nav .nav__links--hamburger .span {
   left: 4px;
   top: 3px;
   border-radius: 10px;
-  background-color: #ff6500;
+  background-color: #ccd5ae;
   z-index: 1;
 }
 @media (max-width: 600px) {
@@ -410,8 +411,9 @@ main header nav .nav__links--hamburger .span {
 }
 .main__hero--btn ul li {
   z-index: 10;
-  color: #ffffff;
+  color: #0b192c;
   text-align: center;
+  font-weight: 700;
 }
 @media (min-width: 601px) and (max-width: 768px) {
   .main__hero--btn ul li {
@@ -537,7 +539,7 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__services__options__primary--box {
-  background-color: #f5efff;
+  background-color: #ccd5ae;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 5px #0b192c;
@@ -563,7 +565,7 @@ main header nav .nav__links--hamburger .span {
 }
 .main__services__options__primary--box--content h4 {
   font-size: 35px;
-  color: #ff6500;
+  color: #0b192c;
 }
 .main__services__options__primary--box--content p {
   color: #0b192c;
@@ -669,7 +671,7 @@ main header nav .nav__links--hamburger .span {
 .main__services__options__another__content {
   width: 98%;
   border-radius: 20px;
-  background-color: #f5efff;
+  background-color: #ccd5ae;
   box-shadow: 0 0 5px #0b192c;
   margin: 0 auto;
   display: flex;
@@ -869,13 +871,13 @@ main header nav .nav__links--hamburger .span {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #ffffff;
   top: 0px;
   z-index: 10;
   right: 0px;
   font-size: 12px;
   text-align: center;
-  color: #f5efff;
+  color: #ffffff;
   font-weight: 600;
   border-radius: 0px 10px 0px 10px;
   background-color: #0b192c;
@@ -897,7 +899,7 @@ main header nav .nav__links--hamburger .span {
   background-color: #0b192c;
   font-size: 12px;
   text-align: center;
-  color: #f5efff;
+  color: #ffffff;
   font-weight: 600;
   border-radius: 0px 10px 0px 10px;
 }
@@ -933,11 +935,11 @@ main header nav .nav__links--hamburger .span {
     gap: 20px;
     overflow: scroll;
     padding: 10px;
-    box-shadow: 0 0 10px inset black;
+    box-shadow: 0 0 10px inset #0b192c;
   }
 }
 .main__offers__container--boxs--box {
-  background-color: #f5efff;
+  background-color: #ccd5ae;
   box-shadow: 0 0 5px #0b192c;
   padding: 15px;
   border-radius: 15px;
@@ -991,6 +993,7 @@ main header nav .nav__links--hamburger .span {
 .main__offers__container--boxs--box--details--star i {
   font-size: 20px;
   cursor: pointer;
+  color: #ffffff;
 }
 .main__offers__container--boxs--box--details h4 {
   font-size: 40px;
@@ -999,7 +1002,7 @@ main header nav .nav__links--hamburger .span {
 .main__offers__container--boxs--box--details a {
   padding: 10px;
   border-radius: 10px;
-  color: white;
+  color: #ffffff;
   font-weight: 700;
   text-align: center;
   background-color: #0b192c;
@@ -1079,11 +1082,11 @@ main header nav .nav__links--hamburger .span {
   position: absolute;
   top: 0px;
   right: 0px;
-  background-color: #ff6500;
+  background-color: #ffffff;
   border-radius: 0px 0px 0px 25px;
   width: 40%;
   height: 20px;
-  color: white;
+  color: #0b192c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1127,11 +1130,11 @@ main header nav .nav__links--hamburger .span {
   padding: 20px;
   width: 100%;
   gap: 40px 0px;
-  background-color: #0b192c;
+  background-color: #ccd5ae;
 }
 .main__offers__slider--boxs--box--info h1 {
   font-size: 45px;
-  color: white;
+  color: #0b192c;
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .main__offers__slider--boxs--box--info h1 {
@@ -1154,7 +1157,7 @@ main header nav .nav__links--hamburger .span {
   gap: 20px 0px;
 }
 .main__offers__slider--boxs--box--info ul li {
-  color: white;
+  color: #0b192c;
   position: relative;
   padding-left: 40px;
   font-size: 18px;
@@ -1220,11 +1223,11 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__offers__slider--boxs--box--info a {
-  background-color: white;
+  background-color: #ffffff;
   align-self: flex-end;
   padding: 10px 180px;
   border-radius: 20px;
-  color: #ff6500;
+  color: #0b192c;
   font-size: 25px;
   font-weight: 500;
   text-transform: capitalize;
@@ -1242,10 +1245,13 @@ main header nav .nav__links--hamburger .span {
   }
 }
 .main__offers__slider--boxs--box--info a:hover {
-  outline: #ff6500 2px solid;
+  outline: #ffffff 2px solid;
   background-color: transparent;
-  color: white;
+  color: #0b192c;
   transition: all 0.3s;
+}
+.main .starColor {
+  color: #ff6500;
 }
 
 .limitAnimation {
@@ -1269,10 +1275,6 @@ main header nav .nav__links--hamburger .span {
     transform: rotate(5deg);
   }
 }
-.starColor {
-  color: #ff6500;
-}
-
 .main__contact {
   background-image: url(../img/car-finalbg.webp);
   background-repeat: no-repeat;
