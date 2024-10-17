@@ -1684,6 +1684,7 @@ main header nav .nav__links--hamburger .span {
 .main__footer h4 {
   color: #ffffff;
   font-size: 20px;
+  text-transform: capitalize;
 }
 .main__footer .footer_design {
   display: flex;
