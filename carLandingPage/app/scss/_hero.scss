@@ -7,12 +7,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 100vh;
+    min-height: 100vh;
     gap: 0px 0px;
     span {
       position: absolute;
       width: 100vw;
-      height: 100vh;
+      min-height: 100%;
       clip-path: polygon(0 0, 70% 0, 43% 100%, 0% 100%);
       @include small-screen {
         clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
@@ -94,7 +94,7 @@
     }
 
     &--btn {
-      padding: 0px 20px;
+      padding: 20px 20px;
       z-index: 2;
       display: flex;
       justify-content: space-around;
@@ -137,7 +137,7 @@
           height: 50%;
           left: -90px;
           top: 20px;
-          background-color: #ffffff;
+          background-color: #0b192c;
           transform: rotate(40deg);
           z-index: 0;
           animation: rotate 3s 2 linear forwards;
