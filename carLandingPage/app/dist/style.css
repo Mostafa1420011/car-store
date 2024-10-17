@@ -1698,6 +1698,7 @@ main header nav .nav__links--hamburger .span {
   gap: 10px 0px;
 }
 .main__footer .footer_design ul li a {
+  text-transform: capitalize;
   color: rgba(255, 255, 255, 0.5450980392);
   font-size: 18px;
 }
