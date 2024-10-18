@@ -200,6 +200,7 @@
           box-shadow: 0 0 5px $secondary-dark;
           margin: 0 auto;
           display: flex;
+          margin-bottom: 10px;
           @include ultra-large-screen {
             flex-direction: row;
           }
@@ -272,11 +273,6 @@
         }
       }
     }
-  }
-}
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
   }
 }
 

@@ -157,7 +157,6 @@
           gap: 20px;
           overflow: scroll;
           padding: 10px;
-          box-shadow: 0 0 10px inset $secondary-dark;
         }
 
         &--box {
@@ -431,22 +430,4 @@
 
 .limitAnimation {
   animation: limitAnimation 0.5s 1;
-}
-
-@keyframes limitAnimation {
-  0% {
-    transform: rotate(-5deg);
-  }
-  25% {
-    transform: rotate(5deg);
-  }
-  50% {
-    transform: rotate(-5deg);
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(5deg);
-  }
 }

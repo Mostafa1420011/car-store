@@ -1,3 +1,14 @@
+const body = document.querySelector('body');
+const btnChangeColor = document.querySelector('.toggle');
+const toggle = document.querySelector('.togglebtn');
+const main = document.querySelector('.main');
+
+btnChangeColor.addEventListener('click', () => {
+  toggle.classList.toggle('toggle--dark');
+  body.classList.toggle('dark-themes');
+  main.classList.toggle('dark--mode');
+});
+
 const span = document.querySelectorAll('[data-name]');
 const hamburger = document.querySelector('.hamburger');
 const ul = document.querySelector('.ul');
@@ -37,6 +48,9 @@ const boxes = document.querySelector('.boxs');
 star.forEach((ele) => {
   ele.addEventListener('click', () => {
     ele.classList.toggle('starColor');
+  });
+  ele.addEventListener('click', () => {
+    ele.classList.toggle('star-color-dark');
   });
 });
 
@@ -131,7 +145,6 @@ boxDiscount.forEach((ele, index) => {
   let convert = parseFloat(ele.innerText);
   let result = (convert * 40) / 100;
   boxLatestPrice[index].innerText = `${result},000`;
-  console.log(convert);
 });
 
 //************* faq*****************//

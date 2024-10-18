@@ -53,6 +53,9 @@
         }
         h1 {
           color: $secondary-dark;
+          @include medium-screen-down {
+            color: $white;
+          }
           line-height: 1.1;
           font-size: 80px;
           font-weight: bold;
@@ -68,6 +71,9 @@
         }
         p {
           color: $secondary-dark;
+          @include medium-screen-down {
+            color: $white;
+          }
           font-weight: bold;
           line-height: 1.6;
           @include small-screen {
@@ -93,7 +99,6 @@
         }
       }
     }
-
     &--btn {
       padding: 20px 20px;
       z-index: 2;
@@ -181,23 +186,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes heroBtn {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
   }
 }

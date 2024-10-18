@@ -1,6 +1,6 @@
 .main {
   &__footer {
-    background-color: #0b192c;
+    background-color: $primary-light;
     min-height: 200px;
     width: 100vw;
     display: grid;
@@ -14,7 +14,7 @@
     }
     padding: 20px;
     h4 {
-      color: #ffffff;
+      color: $secondary-dark;
       font-size: 20px;
       text-transform: capitalize;
     }
@@ -31,8 +31,9 @@
         li {
           a {
             text-transform: capitalize;
-            color: #ffffff8b;
+            color: $secondary-dark;
             font-size: 18px;
+            display: flex;
             &:hover {
               text-decoration: underline;
             }
@@ -73,17 +74,17 @@
           justify-content: center;
           align-items: center;
           margin-top: 10px;
-          background-color: #ff6500;
+          background-color: $secondary-dark;
           width: 40%;
           height: 30px;
           border-radius: 10px;
-          color: #0b192c;
+          color: $white;
           font-size: 18px;
           font-weight: 700;
           &:hover {
-            color: #ffffff;
+            color: $secondary-dark;
             background-color: transparent;
-            outline: 1px solid #ffffff;
+            outline: 1px solid $secondary-dark;
             transition: all 0.5s;
           }
         }
@@ -97,15 +98,15 @@
           align-items: center;
           width: 40px;
           height: 40px;
-          background-color: #ffffff;
+          background-color: $white;
           border-radius: 50%;
           i {
             font-size: 20px;
-            color: #0b192c;
+            color: $secondary-dark;
           }
           &:hover {
-            color: #ffffff;
-            transform: translateY(-10px);
+            color: $white;
+            transform: translateY(-10px) scale(1.2);
             transition: transform 0.5s;
           }
         }

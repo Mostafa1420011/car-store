@@ -9,10 +9,10 @@
     &--title {
       h1 {
         text-transform: capitalize;
-        color: #0b192c;
+        color: $secondary-dark;
         font-size: 100px;
         span {
-          color: #ff6500;
+          color: $secondary;
         }
         @include large-screen-down {
           font-size: 50px;
@@ -27,7 +27,7 @@
       width: 90%;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 0 10px black;
+      box-shadow: 0 0 10px $secondary-dark;
       gap: 20px 0px;
       border-radius: 20px;
       @include small-screen {
@@ -37,7 +37,7 @@
         &:last-child {
           border-bottom: none;
         }
-        border-bottom: 1px solid #0b192c;
+        border-bottom: 1px solid $secondary-dark;
         padding: 5px;
         position: relative;
         overflow: hidden;
@@ -50,7 +50,7 @@
             font-size: 15px;
           }
           @include small-screen {
-            font-size: 13px;
+            font-size: 12px;
           }
         }
         p {
@@ -73,7 +73,7 @@
             right: 10px;
             top: 5px;
             @include small-screen {
-              display: none;
+              font-size: 9px;
             }
           }
         }
